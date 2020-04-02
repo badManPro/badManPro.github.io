@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 前端,学习,技术,互联网">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="记一次Vue组件抽取, 前端,学习,技术,互联网">
+    <meta name="description" content="vue组件抽取需要考虑的因素分析">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Casper</title>
+    <title>记一次Vue组件抽取 | Casper</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">记一次Vue组件抽取</h1>
                 </div>
             </div>
         </div>
@@ -423,9 +423,21 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Vue-js/">
+                                <span class="chip bg-color">Vue.js</span>
+                            </a>
+                        
+                            <a href="/tags/Components/">
+                                <span class="chip bg-color">Components</span>
+                            </a>
+                        
+                            <a href="/tags/Element-UI/">
+                                <span class="chip bg-color">Element UI</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -437,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-02
+                    2020-03-20
                 </div>
                 
 
@@ -446,7 +458,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    739
                 </div>
                 
 
@@ -464,20 +476,109 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                <h1 id="vue组件抽取"><a href="#vue组件抽取" class="headerlink" title="vue组件抽取"></a>vue组件抽取</h1><p>这些天工作中遇到了一些有点坑的事，后台管理系统的一个项目，一个组件6000多行，这才是第一版，考虑到以后很难维护，我决定把我自己刚改好的组件抽离出来，方便维护，该项目是Vue+ElementUI构建，我抽取的组件是一个基于ElementUI做的弹窗。<br>##1. 分析耦合<br>需要先列出组件绑定的属性和调用的方法</p>
+<p>找出data由哪些方法进行更改，其他组件是否更改、调用这些data和方法，<br>然后将el-dialog展开</p>
+<p>如果需要控制<code>el-dialog</code>的弹出，需要用到<code>visible</code></p>
+<pre><code>&lt;el-dialog title="收货地址" :visible.sync="dialogTableVisible&gt;
+  &lt;el-table :data="gridData"&gt;
+    &lt;el-table-column property="date" label="日期" width="150"&gt;&lt;/el-table-column&gt;
+    &lt;el-table-column property="name" label="姓名" width="200"&gt;&lt;/el-table-column&gt;
+    &lt;el-table-column property="address" label="地址"&gt;&lt;/el-table-column&gt;
+  &lt;/el-table&gt;
+  &lt;div class="dialog-footer"&gt;
+      &lt;el-button @click="dialogTableVisible= false"&gt;取 消&lt;/el-button&gt;
+      &lt;el-button @click="dialogTableVisible= false"&gt;确 定&lt;/el-button&gt;
+  &lt;/div&gt;
+&lt;/el-dialog&gt;
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+&lt;script&gt;
+  export default {
+    data() {
+      return {
+        dialogTableVisible,
+        gridData: [{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }]
+      };
+    }
+&lt;/script&gt;</code></pre><p>单独使用el-dialog是如上这样用，如果单抽组件，由父组件控制展示，则需要从父组件传入<code>visible</code>绑定的data,即为父组件给子组件传值，</p>
+<pre><code>// 父组件
+&lt;el-button @click="dialogTableVisible = true"&gt;打开dialog&lt;/el-button&gt;
+&lt;my-dialog :dialogTableVisible="dialogTableVisible"&gt;&lt;/my-dialog&gt;
+&lt;script&gt;
+    import "MyDialog" form "@components/MyDialog.vue"
+    export default {
+        data(){
+            return{
+                dialogTableVisible: false
+            }
+        },
+        components: {
+            MyDialog
+        }
+    }
+&lt;/script&gt;</code></pre><p>子组件用<code>props</code>接收父组件传值</p>
+<pre><code>子组件
+&lt;script&gt;
+    export default {
+        props:['dialogTableVisible']
+    }
+&lt;/script&gt;</code></pre><p>这种方式控制组件的隐藏与展示，不可以在子组件中直接修改<code>props</code>的值，会报错，vue不允许直接修改<code>props</code>的值，需要用到子组件给父组件传值，子组件<code>$emit</code>自定义事件，父组件监听事件，由父组件修改</p>
+<pre><code>//子组件
+&lt;el-dialog title="收货地址" :visible.sync="dialogTableVisible :before-close="cancel"&gt;&lt;/el-dialog&gt;
+&lt;script&gt;
+    export default {
+        props:['dialogTableVisible'],
+        methods: {
+            cancel(){
+                this.$emit("closeDialog")
+            }
+        }
+    }
+&lt;/script&gt;</code></pre><pre><code>//父组件
+&lt;my-dialog :dialog-table-visible="dialogTableVisible" @closeDialog="closeChild"&gt;&lt;/my-dialog&gt;
+&lt;script&gt;
+    export default {
+        methods: {
+            closeChild(){
+                this.dialogTableVisible= false
+            }
+        }
+    }
+&lt;/script&gt;</code></pre><p>如果子组件需要父组件触发子组件的方法，则可以给父组件定义ref<br>通过<code>this.$refs.childDialog.children(args)</code>来调用，还可以传参。</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -502,7 +603,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://badmanpro.github.io/2020/04/02/hello-world/">https://badmanpro.github.io/2020/04/02/hello-world/</a>
+                    <a href="https://badmanpro.github.io/2020/03/20/vue-zu-jian-chou-qu/">https://badmanpro.github.io/2020/03/20/vue-zu-jian-chou-qu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -539,7 +640,19 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/Vue-js/">
+                                    <span class="chip bg-color">Vue.js</span>
+                                </a>
+                            
+                                <a href="/tags/Components/">
+                                    <span class="chip bg-color">Components</span>
+                                </a>
+                            
+                                <a href="/tags/Element-UI/">
+                                    <span class="chip bg-color">Element UI</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -708,7 +821,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-04-02T15-48-15',
+        id: '2020-03-20T09-25-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -729,10 +842,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2020/04/02/hello-world/">
                     <div class="card-image">
@@ -750,9 +862,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-02
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -761,7 +873,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -769,7 +880,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="/2020/03/20/vue-zu-jian-chou-qu/">
@@ -799,6 +910,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/04/02/hello-world/"/>
+      <url>/2020/04/02/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记一次Vue组件抽取</title>
+      <link href="/2020/03/20/vue-zu-jian-chou-qu/"/>
+      <url>/2020/03/20/vue-zu-jian-chou-qu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="vue组件抽取"><a href="#vue组件抽取" class="headerlink" title="vue组件抽取"></a>vue组件抽取</h1><p>这些天工作中遇到了一些有点坑的事，后台管理系统的一个项目，一个组件6000多行，这才是第一版，考虑到以后很难维护，我决定把我自己刚改好的组件抽离出来，方便维护，该项目是Vue+ElementUI构建，我抽取的组件是一个基于ElementUI做的弹窗。<br>##1. 分析耦合<br>需要先列出组件绑定的属性和调用的方法</p><p>找出data由哪些方法进行更改，其他组件是否更改、调用这些data和方法，<br>然后将el-dialog展开</p><p>如果需要控制<code>el-dialog</code>的弹出，需要用到<code>visible</code></p><pre><code>&lt;el-dialog title="收货地址" :visible.sync="dialogTableVisible&gt;  &lt;el-table :data="gridData"&gt;    &lt;el-table-column property="date" label="日期" width="150"&gt;&lt;/el-table-column&gt;    &lt;el-table-column property="name" label="姓名" width="200"&gt;&lt;/el-table-column&gt;    &lt;el-table-column property="address" label="地址"&gt;&lt;/el-table-column&gt;  &lt;/el-table&gt;  &lt;div class="dialog-footer"&gt;      &lt;el-button @click="dialogTableVisible= false"&gt;取 消&lt;/el-button&gt;      &lt;el-button @click="dialogTableVisible= false"&gt;确 定&lt;/el-button&gt;  &lt;/div&gt;&lt;/el-dialog&gt;&lt;script&gt;  export default {    data() {      return {        dialogTableVisible,        gridData: [{          date: '2016-05-02',          name: '王小虎',          address: '上海市普陀区金沙江路 1518 弄'        }, {          date: '2016-05-04',          name: '王小虎',          address: '上海市普陀区金沙江路 1518 弄'        }, {          date: '2016-05-01',          name: '王小虎',          address: '上海市普陀区金沙江路 1518 弄'        }, {          date: '2016-05-03',          name: '王小虎',          address: '上海市普陀区金沙江路 1518 弄'        }]      };    }&lt;/script&gt;</code></pre><p>单独使用el-dialog是如上这样用，如果单抽组件，由父组件控制展示，则需要从父组件传入<code>visible</code>绑定的data,即为父组件给子组件传值，</p><pre><code>// 父组件&lt;el-button @click="dialogTableVisible = true"&gt;打开dialog&lt;/el-button&gt;&lt;my-dialog :dialogTableVisible="dialogTableVisible"&gt;&lt;/my-dialog&gt;&lt;script&gt;    import "MyDialog" form "@components/MyDialog.vue"    export default {        data(){            return{                dialogTableVisible: false            }        },        components: {            MyDialog        }    }&lt;/script&gt;</code></pre><p>子组件用<code>props</code>接收父组件传值</p><pre><code>子组件&lt;script&gt;    export default {        props:['dialogTableVisible']    }&lt;/script&gt;</code></pre><p>这种方式控制组件的隐藏与展示，不可以在子组件中直接修改<code>props</code>的值，会报错，vue不允许直接修改<code>props</code>的值，需要用到子组件给父组件传值，子组件<code>$emit</code>自定义事件，父组件监听事件，由父组件修改</p><pre><code>//子组件&lt;el-dialog title="收货地址" :visible.sync="dialogTableVisible :before-close="cancel"&gt;&lt;/el-dialog&gt;&lt;script&gt;    export default {        props:['dialogTableVisible'],        methods: {            cancel(){                this.$emit("closeDialog")            }        }    }&lt;/script&gt;</code></pre><pre><code>//父组件&lt;my-dialog :dialog-table-visible="dialogTableVisible" @closeDialog="closeChild"&gt;&lt;/my-dialog&gt;&lt;script&gt;    export default {        methods: {            closeChild(){                this.dialogTableVisible= false            }        }    }&lt;/script&gt;</code></pre><p>如果子组件需要父组件触发子组件的方法，则可以给父组件定义ref<br>通过<code>this.$refs.childDialog.children(args)</code>来调用，还可以传参。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Vue.js </tag>
+            
+            <tag> Components </tag>
+            
+            <tag> Element UI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
