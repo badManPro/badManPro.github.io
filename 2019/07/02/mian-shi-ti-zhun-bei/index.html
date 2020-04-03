@@ -1,0 +1,2742 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="面试题准备, 前端,学习,技术,互联网">
+    <meta name="description" content="#css##1、盒模型标准W3C盒模型(content-box)width：contentIE盒模型width(border-box)：content+border+padding通过CSS3属性box-sizing来设定，参数有borde">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>面试题准备 | Casper</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Casper</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Casper</div>
+        <div class="logo-desc">
+            
+            前端学习博客，前端工作记录
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/badManPro" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/badManPro" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">面试题准备</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-07-02
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    13.2k
+                </div>
+                
+
+                
+				
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+            
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>#css<br>##1、盒模型<br>标准W3C盒模型(content-box)width：content<br><br>IE盒模型width(border-box)：content+border+padding<br><br>通过CSS3属性box-sizing来设定，参数有border-box/content-box/inherit</p>
+<p>##2、flex<br>通过display: flex启动，重要属性 <br><br>justify-content: center;<br><br>align-items: center<br>##3、css单位<br>###绝对单位</p>
+<table>
+<thead>
+<tr>
+<th align="center">单位</th>
+<th align="center">简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">px</td>
+<td align="center">像素 (计算机屏幕上的一个点)，1px = 1/96in</td>
+</tr>
+<tr>
+<td align="center">pt</td>
+<td align="center">磅 (Points) ，1 pt = 1/72 in</td>
+</tr>
+<tr>
+<td align="center">pc</td>
+<td align="center">12 点活字（Picas），1pc = 12pt = 1/6in</td>
+</tr>
+<tr>
+<td align="center">in</td>
+<td align="center">英寸（Inches），1in = 96px = 2.54cm</td>
+</tr>
+<tr>
+<td align="center">cm</td>
+<td align="center">厘米（Centimeters），1cm = 96/2.54px</td>
+</tr>
+<tr>
+<td align="center">mm</td>
+<td align="center">毫米（Millimeters），1mm = 1/10cm</td>
+</tr>
+<tr>
+<td align="center">q</td>
+<td align="center">Quarter-millimeters，1q = 1/4mm</td>
+</tr>
+</tbody></table>
+<p>###相对单位<br>单位 | 简介<br>:-: | :-:<br>% | 百分比，相对于父元素的宽度或者字体大小<br>em    | 相对于当前对象内文本字体的大小，1em = 当前字体的大小，2em = 2*当前字体的大小<br>rem     |（root em）,相对于html标签的字体大小<br>ex    | 当前字体环境中x字母的高度，一个 ex 是一个字体的 x-height (x-height 通常是字体尺寸的一半。)<br>ch    | 当前字体环境中0数字的高度<br>vw    | 1%视口（浏览器可视区域）的宽度<br>vh    | 1% 视口（浏览器可视区域）的高度<br>vmin | 1% 视口（浏览器可视区域）宽度和高度中较小的尺寸<br>vmax | 1% 视口（浏览器可视区域）宽度和高度中较大的尺寸</p>
+<p>##4、css选择器</p>
+<table>
+<thead>
+<tr>
+<th align="center">选择器</th>
+<th align="center">符号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">#idName</td>
+</tr>
+<tr>
+<td align="center">class</td>
+<td align="center">.classname</td>
+</tr>
+<tr>
+<td align="center">相邻选择器</td>
+<td align="center">ul+div</td>
+</tr>
+<tr>
+<td align="center">子选择器</td>
+<td align="center">ul&gt;div</td>
+</tr>
+<tr>
+<td align="center">后代选择器</td>
+<td align="center">ul div</td>
+</tr>
+<tr>
+<td align="center">通配符</td>
+<td align="center">*</td>
+</tr>
+<tr>
+<td align="center">属性选择器</td>
+<td align="center">a[href=’xxx’]</td>
+</tr>
+<tr>
+<td align="center">伪类选择器</td>
+<td align="center">a:after a:hover</td>
+</tr>
+<tr>
+<td align="center">##5、bfc 清除浮动</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">BFC（块格式化上下文）<br></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">####以下情况会创建BFC</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<ol>
+<li>根元素或包含根元素的元素</li>
+<li>浮动元素 float ＝ left | right 或 inherit（≠ none）</li>
+<li>绝对定位元素 position ＝ absolute 或 fixed</li>
+<li>display ＝ inline-block | flex | inline-flex | table-cell 或 table-caption</li>
+<li>overflow ＝ hidden | auto 或 scroll (≠ visible)</li>
+</ol>
+<p>####BFC特性</p>
+<ol>
+<li>BFC 是一个独立的容器，容器内子元素不会影响容器外的元素。反之亦如此。</li>
+<li>盒子从顶端开始垂直地一个接一个地排列，盒子之间垂直的间距是由 margin 决定的。</li>
+<li>在同一个 BFC 中，两个相邻的块级盒子的垂直外边距会发生重叠。</li>
+<li>BFC 区域不会和 float box 发生重叠。</li>
+<li>BFC 能够识别并包含浮动元素，当计算其区域的高度时，浮动元素也可以参与计算了。</li>
+</ol>
+<p>###BFC清除浮动</p>
+<ol>
+<li>父元素设置 overflow: hidden</li>
+<li>浮动元素加clearfix类</li>
+</ol>
+<pre><code>.clearfix:after{
+    content: ''
+    display: block
+    clear: both
+}</code></pre><p>##6、层叠上下文<br>z-index<br>##7、常见页面布局</p>
+<p>##8、响应式布局<br>##9、css预处理，后处理<br>预处理：sass、LESS、stylus<br>##10、css3新特性, animation和transiton的相关属性, animate和translate</p>
+<p>###transiton的参数<br>属性 | 值 | 描述<br>:-: | :-: | :-:<br>transition-property | none,all,property | 指定CSS属性的name，transition效果<br>transition-duration | time(默认为0) | transition效果需要指定多少秒或毫秒才能完成<br>transition-timing-function | 见下表 | 指定transition效果的转速曲线<br>transition-delay | time | 定义transition效果开始的时间</p>
+<p>####transition-timing-function的值<br>值 | 描述<br>:-:|:-:<br>linear    | 规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。<br>ease | 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。<br>ease-in | 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。<br>ease-out | 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。<br>ease-in-out | 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。<br>cubic-bezier(n,n,n,n) | 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。</p>
+<p>####transition优点在于简单易用，有几个缺陷</p>
+<ol>
+<li><p>transition需要事件触发，所以没法在网页加载时自动发生。</p>
+</li>
+<li><p>transition是一次性的，不能重复发生，除非一再触发。</p>
+</li>
+<li><p>transition只能定义开始状态和结束状态，不能定义中间状态，也就是说只有两个状态。</p>
+</li>
+<li><p>一条transition规则，只能定义一个属性的变化，不能涉及多个属性。 </p>
+</li>
+</ol>
+<p>所以针对以上缺陷，提出了Animation</p>
+<p>###animation参数<br>值 | 描述<br>:-: | :-:<br>animation-name | 指定要绑定到选择器的关键帧的名称<br>animation-duration | 动画指定需要多少秒或毫秒完成<br>animation-timing-function | 设置动画将如何完成一个周期<br>animation-delay | 设置动画在启动前的延迟间隔。<br>animation-iteration-count | 定义动画的播放次数。<br>animation-direction | 指定是否应该轮流反向播放动画。<br>animation-fill-mode | 规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。<br>animation-play-state | 指定动画是否正在运行或已暂停。<br>initial | 设置属性为其默认值。<br>inherit | 从父元素继承属性。</p>
+<p><strong>animation-direction的值</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">normal</td>
+<td align="center">默认值。动画按正常播放。</td>
+</tr>
+<tr>
+<td align="center">reverse</td>
+<td align="center">动画反向播放。</td>
+</tr>
+<tr>
+<td align="center">alternate</td>
+<td align="center">动画在奇数次（1、3、5…）正向播放，在偶数次（2、4、6…）反向播放。</td>
+</tr>
+<tr>
+<td align="center">alternate-reverse</td>
+<td align="center">动画在奇数次（1、3、5…）反向播放，在偶数次（2、4、6…）正向播放。</td>
+</tr>
+<tr>
+<td align="center">initial</td>
+<td align="center">设置该属性为它的默认值。</td>
+</tr>
+<tr>
+<td align="center">inherit</td>
+<td align="center">从父元素继承该属性。</td>
+</tr>
+</tbody></table>
+<p><strong>animation-fill-mode的值</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">none</td>
+<td align="center">默认值。动画在动画执行之前和之后不会应用任何样式到目标元素。</td>
+</tr>
+<tr>
+<td align="center">forwards</td>
+<td align="center">在动画结束后（由 animation-iteration-count 决定），动画将应用该属性值。</td>
+</tr>
+<tr>
+<td align="center">backwards</td>
+<td align="center">动画将应用在 animation-delay 定义期间启动动画的第一次迭代的关键帧中定义的属性值。这些都是 from 关键帧中的值（当 animation-direction 为 “normal” 或 “alternate” 时）或 to 关键帧中的值（当 animation-direction 为 “reverse” 或 “alternate-reverse” 时）。</td>
+</tr>
+<tr>
+<td align="center">both</td>
+<td align="center">动画遵循 forwards 和 backwards 的规则。也就是说，动画会在两个方向上扩展动画属性。</td>
+</tr>
+<tr>
+<td align="center">initial</td>
+<td align="center">设置该属性为它的默认值。</td>
+</tr>
+<tr>
+<td align="center">inherit</td>
+<td align="center">从父元素继承该属性。</td>
+</tr>
+</tbody></table>
+<p>##11、display哪些取值</p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">none</td>
+<td align="center">此元素不会被显示。</td>
+</tr>
+<tr>
+<td align="center">block</td>
+<td align="center">此元素将显示为块级元素，此元素前后会带有换行符。</td>
+</tr>
+<tr>
+<td align="center">inline</td>
+<td align="center">默认。此元素会被显示为内联元素，元素前后没有换行符。</td>
+</tr>
+<tr>
+<td align="center">inline-block</td>
+<td align="center">行内块元素。（CSS2.1 新增的值）</td>
+</tr>
+<tr>
+<td align="center">list-item</td>
+<td align="center">此元素会作为列表显示。</td>
+</tr>
+<tr>
+<td align="center">run-in</td>
+<td align="center">此元素会根据上下文作为块级元素或内联元素显示。</td>
+</tr>
+<tr>
+<td align="center">table</td>
+<td align="center">此元素会作为块级表格来显示（类似 <code>&lt;table&gt;</code>)，表格前后带有换行符。</td>
+</tr>
+<tr>
+<td align="center">inline-table</td>
+<td align="center">此元素会作为内联表格来显示（类似 <code>&lt;table&gt;</code>），表格前后没有换行符。</td>
+</tr>
+<tr>
+<td align="center">table-row-group</td>
+<td align="center">此元素会作为一个或多个行的分组来显示（类似 <code>&lt;tbody&gt;</code>）。</td>
+</tr>
+<tr>
+<td align="center">table-header-group</td>
+<td align="center">此元素会作为一个或多个行的分组来显示（类似 <code>&lt;thead&gt;</code>）。</td>
+</tr>
+<tr>
+<td align="center">table-footer-group</td>
+<td align="center">此元素会作为一个或多个行的分组来显示（类似 <code>&lt;tfoot&gt;</code>）。</td>
+</tr>
+<tr>
+<td align="center">table-row</td>
+<td align="center">此元素会作为一个表格行显示（类似 <code>&lt;tr&gt;</code>）。</td>
+</tr>
+<tr>
+<td align="center">table-column-group</td>
+<td align="center">此元素会作为一个或多个列的分组来显示（类似 <code>&lt;colgroup&gt;</code>）。</td>
+</tr>
+<tr>
+<td align="center">table-column</td>
+<td align="center">此元素会作为一个单元格列显示（类似 <code>&lt;col&gt;</code>）</td>
+</tr>
+<tr>
+<td align="center">table-cell</td>
+<td align="center">此元素会作为一个表格单元格显示（类似 <code>&lt;td&gt;</code> 和 <code>&lt;th&gt;</code>）</td>
+</tr>
+<tr>
+<td align="center">table-caption</td>
+<td align="center">此元素会作为一个表格标题显示（类似 <code>&lt;caption&gt;</code>）</td>
+</tr>
+<tr>
+<td align="center">inherit</td>
+<td align="center">规定应该从父元素继承 display 属性的值。</td>
+</tr>
+</tbody></table>
+<p>##12、相邻的两个inline-block节点为什么会出现间隔，该如何解决<br>英文有空格作为词分界，而中文则没有。由空格换行符导致的</p>
+<p><strong>解决方法</strong></p>
+<ol>
+<li><p>改变代码书写方式。<br> 取消标签与标签之间的空格换行符，<br> 考虑到代码的可读性，废弃</p>
+</li>
+<li><p>改变字符大小。<br> 使用 font-size：0</p>
+<pre><code> .space {
+     font-size: 0;
+ }
+ .space a{
+     font-size: 12px
+ }</code></pre><p> 可以去除大部分浏览器的间距，IE7有时会有1px间距，Chrome默认存在字体大小限制。所以需要进一步处理</p>
+<pre><code> .space {
+     font-size:0;
+     -webkit-text-size-adjust:none;
+ }</code></pre><p> 据说已经取消了最小字体限制，该行代码应该已经不适用</p>
+</li>
+<li><p>使用letter-spacing。<br> 给父级元素设置一个较大的负值，在元素上将letter-spacing归0</p>
+<pre><code> .space {
+     letter-spacing: -3px;
+ }
+ .space a {
+     letter-space: 0;
+ }</code></pre><p> 基本适用全浏览器，除Opera最小间距1px</p>
+</li>
+</ol>
+<p>##13、meta viewport 移动端适配</p>
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"&gt;</code></pre><p>##14、CSS实现宽度自适应100%，宽高16:9的比例的矩形<br>先计算高度<br><br>假设宽为100%，那么高为 h= 9/16 = 56.25%<br>设置padding-bottom实现</p>
+<p>html</p>
+<pre><code>&lt;body&gt;
+    &lt;div class="wrap"&gt;
+        &lt;div class="box"&gt;
+            &lt;p&gt;这是一个16：9的矩形&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre><p>CSS</p>
+<pre><code>* {
+    margin: 0px;
+    padding: 0px;
+}
+.wrap {
+    width:50%
+}
+.box {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+    background: pink;
+    position: relative;
+}
+.box p {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}</code></pre><p>##15、画三角形<br>因为padding和margin无法设置颜色<br>所以三角形的填充颜色 利用border来进行</p>
+<pre><code>.triangle {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom: 100px solid green;
+}</code></pre><p>##16、1像素边框问题<br>移动端的css里面写了1px，实际确比1px粗， iPhone的devicePixelRatio ==2 而border-width：1px是设备独立像素，所以被释放为物理像素2px，所以比较粗</p>
+<p>###解决方法</p>
+<ol>
+<li>媒体查询利用设备像素比缩放，设置小数像素</li>
+<li>border-image方案</li>
+<li>background-image渐变实现</li>
+<li>box-shadow方案</li>
+<li>transform: scale(0.5)</li>
+</ol>
+<p>#html<br>##1、语义化<br>HTML的语义化有助于SEO，爬虫抓取更多有效信息，在没有CSS的情况下也能结构分明，方遍开发维护</p>
+<p>##2、新标签新特性</p>
+<ul>
+<li>增加的标签</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">标签</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">header</td>
+<td align="center">定义文档头部</td>
+</tr>
+<tr>
+<td align="center">footer</td>
+<td align="center">定义文档尾部</td>
+</tr>
+<tr>
+<td align="center">nav</td>
+<td align="center">定义文档导航</td>
+</tr>
+<tr>
+<td align="center">section</td>
+<td align="center">定义区块</td>
+</tr>
+<tr>
+<td align="center">article</td>
+<td align="center">定义页面独立的内容区域</td>
+</tr>
+<tr>
+<td align="center">aside</td>
+<td align="center">定义边栏</td>
+</tr>
+<tr>
+<td align="center">details</td>
+<td align="center">定义文档描述细节</td>
+</tr>
+<tr>
+<td align="center">summary</td>
+<td align="center">标签包含details元素标题</td>
+</tr>
+<tr>
+<td align="center">dialog</td>
+<td align="center">定义对话框，比如提示框</td>
+</tr>
+<tr>
+<td align="center">canvas</td>
+<td align="center">用于绘画的标签</td>
+</tr>
+<tr>
+<td align="center">audio</td>
+<td align="center">音频播放</td>
+</tr>
+<tr>
+<td align="center">video</td>
+<td align="center">视频播放</td>
+</tr>
+</tbody></table>
+<ul>
+<li>增强型表单type</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">输入类型</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">color</td>
+<td align="center">选取颜色</td>
+</tr>
+<tr>
+<td align="center">date</td>
+<td align="center">从一个日期选择器选取一个日期</td>
+</tr>
+<tr>
+<td align="center">datetime</td>
+<td align="center">选择一个日期（UTC时间）</td>
+</tr>
+<tr>
+<td align="center">datetime-local</td>
+<td align="center">选择一个日期和时间（无时区）</td>
+</tr>
+<tr>
+<td align="center">email</td>
+<td align="center">包含一个邮件地址输入域</td>
+</tr>
+<tr>
+<td align="center">month</td>
+<td align="center">选择一个月份</td>
+</tr>
+<tr>
+<td align="center">number</td>
+<td align="center">数值的输入域</td>
+</tr>
+<tr>
+<td align="center">range</td>
+<td align="center">一定范围内的数字值输入域</td>
+</tr>
+<tr>
+<td align="center">search</td>
+<td align="center">用于搜索域</td>
+</tr>
+<tr>
+<td align="center">tel</td>
+<td align="center">定义输入电话字段</td>
+</tr>
+<tr>
+<td align="center">time</td>
+<td align="center">选择一个时间</td>
+</tr>
+<tr>
+<td align="center">url</td>
+<td align="center">URL地址的输入域</td>
+</tr>
+<tr>
+<td align="center">week</td>
+<td align="center">选择周和年</td>
+</tr>
+</tbody></table>
+<ul>
+<li>新增表单属性 </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">placeholder</td>
+<td align="center">输入框提示灰色字</td>
+</tr>
+<tr>
+<td align="center">required</td>
+<td align="center">boolean属性，要求输入域不为空</td>
+</tr>
+<tr>
+<td align="center">pattern</td>
+<td align="center">描述了一个正则用于验证input值</td>
+</tr>
+<tr>
+<td align="center">min和max属性</td>
+<td align="center">设置了元素的最小值最大值</td>
+</tr>
+<tr>
+<td align="center">step</td>
+<td align="center">为输入域规定合法数字间隔</td>
+</tr>
+<tr>
+<td align="center">height和width</td>
+<td align="center">用于image类型input图像高度宽度</td>
+</tr>
+<tr>
+<td align="center">autofocus</td>
+<td align="center">boolean属性，页面加载自动获得焦点</td>
+</tr>
+<tr>
+<td align="center">multiple</td>
+<td align="center">boolean属性，规定input元素可选择多个值</td>
+</tr>
+</tbody></table>
+<p>##3、input和textarea的区别<br>###input标签</p>
+<ol>
+<li>需要指定type属性，如text，password</li>
+<li>通过size属性指定显示字符长度</li>
+<li>value属性指定初始值</li>
+<li>Maxlength属性指定文本框可以输入的最长长度</li>
+<li>焦点垂直居中文本框中，单行</li>
+</ol>
+<p>###textarea标签</p>
+<ol>
+<li>需要来封闭</li>
+<li>内容写在标签中</li>
+<li>使用row，col指定textarea大小</li>
+<li>焦点在左上角，多行</li>
+</ol>
+<p>##4、用一个div模拟textarea的实现</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;模拟textarea&lt;/title&gt;
+    &lt;style&gt;
+        #textarea {
+            width: 300px;
+            min-height: 120px;
+            max-height: 300px;
+            border: 1px solid #333;
+            overflow-y: auto
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="textarea" contenteditable="true"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>##5、移动设备忽略将页面中的数字识别为电话号码的方法</p>
+<pre><code>&lt;meta name = "format-detection" content = "telephone=no"&gt;</code></pre><p>#JS<br>##1、原型/原型链/构造函数/实例/继承<br>###1. <strong>proto</strong>(原型)<br>每个对象又有<strong>proto</strong>属性，指向创建他的构造函数的原型对象（实例指向原型对象的指针）<br>###2.prototype原型对象<br>每个函数都有一个prototype属性，是指向一个对象的引用，这个对象成为原型对象，原型对象包含函数实例共享的方法和属性，也就是说将函数用作new时，新创建的对象会从原型上继承属性和方法<br>###3.原型链</p>
+<p>原型可以通过<strong>proto</strong>访问到原型的原型，比如构造函数Person继承前者的有一个构造函数People,然后new People得到实例p<br><img src="https://ask.qcloudimg.com/http-save/yehe-1500612/fib8zehnvz.png?imageView2/2/w/1620" alt="image"><br><img src="https://upload-images.jianshu.io/upload_images/5899414-6eb98d0ab171275d.png" alt="image"><br>###4.构造函数Constructor 实例、<br>new运算符创建的函数，其实就是构造函数，构造函数创建出的对象，就是实例<br>###5.继承<br>子类可以使用父类的所有功能，并且对这些功能进行扩展。继承的过程，就是从一般到特殊的过程</p>
+<p>##2、有几种方式可以实现继承<br>###6种方式实现继承</p>
+<p>想要继承，必须有一个父类</p>
+<pre><code>function Person(name){
+    this.name=name
+    this.sum = function(){
+        alert(this.name)
+    }
+}
+Person.prototype.age = 10;</code></pre><ol>
+<li>原型链继承</li>
+</ol>
+<pre><code>function Per(){
+    this.name = "ker"
+}
+Per.prototype = new Person();//原型链继承
+var per1 = new Per();
+console.log(per1.age)//10
+// instanceof 判断元素是否早另一个元素的原型链上
+// per1 继承了Person的属性，返回true
+console.log(per1 instanceof Person)</code></pre><p>重点：需要让新实例的原型，被父类的实例赋值<br>优点：实例可继承的属性有: 实例的构造函数的属性，父类构造函数属性，父类原型的属性<br>缺点：1. 新实例无法向父类构造函数传参<br>     2. 继承单一<br>     3. 所有新实例都会共享父类实例属性，原型上的属性是共享的，一个实例修改了原型属性，所有实例的原型属性也会被修改</p>
+<ol start="2">
+<li>构造函数继承</li>
+</ol>
+<pre><code>function Con(){
+    Person.call(this,"jer")//重点
+    this.age = 12;
+}
+var con1 = new Con();
+console.log(con1.name);//"jer"
+console.log(con1.age);//12
+console.log(con1 instanceof Person)//false</code></pre><p>重点：用call()和apply()将父类构造函数引入子类函数<br>优点: 1. 只继承了父类构造函数的属性，没有继承父类原型属性<br>      2. 解决了原型链继承缺点123<br>      3. 可以继承多个构造函数属性（call多个）<br>      4. 在子实例中可以向父实例传参<br>缺点: 1. 只能继承附列构造函数属性<br>      2. 无法实现构造函数的复用（每次用每次都要重新调用）<br>      3. 每个新实例都有父类构造函数的副本，臃肿</p>
+<ol start="3">
+<li>组合继承（组合原型链继承和构造函数继承）（常用）</li>
+</ol>
+<pre><code>function SubType(name){
+    Person.call(this,name)//借用构造函数继承
+}
+SubType.prototype = new Person()//原型链继承
+var sub = new SubType("gar")
+console.log(sub.name)//“gar”继承了构造函数属性
+console.log(sub.age);//10 继承了父类原型的属性</code></pre><p>重点: 结合了两种模式的有点，传参和复用<br>优点: 1. 可以继承父类原型上的属性，可以传参，可以复用<br>      2. 每个新实例引入的构造函数是私有的<br>缺点: 调用两次父类的构造函数，子类的构造函数会代替原型上那个父类构造函数</p>
+<ol start="4">
+<li>原型式继承</li>
+</ol>
+<pre><code>// 先封装一个函数容器，用来输出对象和承载继承的原型
+function content(obj){
+    function F(){}
+    F.prototype = obj;//继承了传入的参数
+    return F(); //返回函数对象
+}
+var sup = new Person();// 拿到父类实例
+var sup1 = content(sup);
+console.log(sup1.age);// 10 继承了父类函数的属性</code></pre><p>重点: 用函数包裹对象，然后返回函数的调用，这个函数就变成了可以随意添加属性的实例或对象，object.create()就是这个原理<br>特点: 类似于复制一个对象，用函数来包装<br>缺点: 1. 所有实例都会继承原型上属性<br>      2. 无法实现复用，新实例属性都是后面添加的</p>
+<ol start="5">
+<li>寄生式继承</li>
+</ol>
+<pre><code>function content(obj){
+    function F(){}
+    F.prototype = obj
+    return new F();
+}
+var sup = new Person();
+function subobject(obj){
+    var sub = content(obj)
+    sub.name = "gar"
+    return sub;
+}
+var sup2 = subobject(sup)
+console.log(typeof subobject)//function
+console.log(typeof sup2)//object
+console.log(sup2.name)//"gar" 返回了个sub对象，继承了sub的属性</code></pre><p>重点：就是给原型式继承外面套了壳子<br>特点: 没有创建自定义类型，因为只是套了壳子返回对象，这个函数也就成为了新对象<br>缺点：没用到原型，无法复用<br>6. 寄生组合式继承（常用）</p>
+<p>##3、用原型实现继承有什么缺点，怎么解决<br>缺点 </p>
+<ol>
+<li><p>重写子类的原型 等于 父类的一个实例，（父类的实例属相变成子类的原型属性）如果父类包含引用类型的属性，那么子类所有实例都会共享该属性</p>
+</li>
+<li><p>在创建子类实例时，不能向父类的构造函数传递参数</p>
+</li>
+</ol>
+<p>解决办法：组合继承解决原型链继承的引用类型原型属性被实例共享问题<br>##4、arguments<br>它是js的一个内置对象，常被忽略，js不像JAVA是显示传递参数，js传的是形参，可以传也可以不传，若方法里面没有写参数，却传入了参数，可用arguments拿到参数<br>每一个函数都有一个arguments对象，他包括了函数所要调的参数，通常我们把它当作数组使用，用它的length得到参数数量，但它是类数组对象，无法使用push<br>##5、数据类型判断</p>
+<ol>
+<li>typeof</li>
+</ol>
+<pre><code>typeof '';//string 有效
+typeof 1; // number 有效
+typeof Symbol();//symbol 有效
+typeof true; // boolean
+typeof undefined; //undefined 有效
+typeof null; // object 无效
+typeof []; // object 无效
+typeof new Function(); // functionyoux 
+typeof new Date(); // object 无效
+typeof new RegExp; //object 无效</code></pre><ol start="2">
+<li><p>instanceof<br>用于判断A是否是B的实例，表达式为 A instanceof B</p>
+</li>
+<li><p>constructor</p>
+</li>
+</ol>
+<pre><code>console.log('数据类型判断' - constructor);
+console.log(arr.constructor === Array);//true
+console.log(date.constructor === Date); // true
+console.log(fn.constructor === Function); // true</code></pre><ol start="4">
+<li>toString</li>
+</ol>
+<pre><code>Object.prototype.toString.call('');//[object String]
+Object.prototype.toString.call(1); //[object Nmuber]
+Object.prototype.toString.call(document)//[object HTMLDocument]
+Object.prototype.toString.call(window)//[object global]</code></pre><p>##6、作用域链、闭包、作用域</p>
+<p>###作用域<br>js的作用域是靠函数形成的，函数外不可访问函数内的变量，作用域就是变量和函数的可访问的范围。</p>
+<p>###作用域链<br>当代码在一个环境中执行时，会创建变量对象的一个作用域链(scope chain)来保证对执行环境有权访问的变量和函数的有序访问</p>
+<p>###闭包<br>能够访问另一个函数作用域中变量的函数</p>
+<pre><code>function outer() {
+    var a = '变量1'
+    var inner = function () {
+        console.info(a)
+    }
+    return inner //inner就是一个闭包函数，因为他可以访问outer函数的作用域
+}</code></pre><p>闭包的问题</p>
+<ol>
+<li>引用的变量可能发生变化</li>
+<li>this指向</li>
+<li>内存泄漏</li>
+</ol>
+<p>闭包的作用</p>
+<ol>
+<li>解决递归调用</li>
+<li>模仿块级作用域</li>
+</ol>
+<p>##7、Ajax的原生写法</p>
+<pre><code>function ajax(opts){
+    var xhr = new XMLHttpRequest();//创建ajax对象
+    xhr.onreadystatechange = fucntion(){
+        if(xhr.readyState ===4 &amp; xhr.status===200){
+            opts.success(JSON.parse(xhr.responseText))
+        }else if(xhr.readyState === 4 &amp; xhr.status !== 200){
+            opts.error();
+        }
+    }
+    var urlStr = ''
+    for (var key in opts.data){
+        urlStr = key + '=' + opts.data[key] + '&amp;';
+    }
+    urlStr = urlStr.substing(0, urlStr.length-1);
+    if(opts.type.toLowerCase() === 'get'){
+        xhr.open(opts.type, opts.url + '?' + urlStr, true)
+        xhr.send()
+    }
+    if(opts.type.toLowerCase() === 'post'){
+        xhr.open('post', opts.url, true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send(urlStr);
+    }
+};
+btn.addEventListener('click', function(){
+    ajax({
+        url: 'list.json',
+        type: 'post',
+        success: fucntion(data){
+            console.log(data.list)
+        },
+        error: function(){
+            console.log('发生了错误...')
+        }
+    })
+})</code></pre><p>##8、对象深拷贝、浅拷贝<br>对象是引用类型，所以直接赋值修改赋值后的数值，原对象会改变</p>
+<pre><code>var boy = {
+    age: 18
+}
+var girl = boy;
+console.log(boy === girl) //true
+girl.age = 20
+console.log(boy.age);//20</code></pre><p>###浅拷贝</p>
+<pre><code>var boy = {
+    age: 18,
+    address: {
+        home: '天堂'
+    }
+}
+var girl = Object.assign({},boy);
+console.log(boy === girl) //false
+girl.age = 20;
+console.log(boy.age);//18
+girl.address.home = '上海'
+console.log(boy.address.home);//上海</code></pre><p>因为Object.assign（）只是浅拷贝girl.address是对栈对象的引用，因此内层对象的修改会影响原始对象。</p>
+<p>###深拷贝</p>
+<ol>
+<li>JSON.parse()和JSON.stringify()深拷贝(仅适用纯JSON对象)</li>
+</ol>
+<pre><code>function deepClone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}</code></pre><ol start="2">
+<li>对象遍历</li>
+</ol>
+<pre><code>
+//包含其他负责的内容 date对象 null undefined
+var obj1={
+    name:"张三",
+    age:20,
+    height:[12,26,46],
+    address:{
+        home:'北京'
+    },
+    birthday:new Date(),
+    father:null,
+    mother:undefined,
+    school:[
+            {
+                middleschool:'北大附中',
+            },
+            {
+                university:'清华大学',
+            }
+        ]
+    }
+    function clone(obj) { 
+        if(obj === null) return null 
+        if(typeof obj !== 'object') return obj;
+        if(obj.constructor === Date) return new Date(obj); 
+        if(obj.constructor === RegExp) return new RegExp(obj);
+        var newObj = new obj.constructor ();  //保持继承链
+        for (var key in obj) {
+         if (obj.hasOwnProperty(key)) {   //不遍历其原型链上的属性
+              var val = obj[key];
+              newObj[key] = typeof val === 'object' ? arguments.callee(val) : val; // 使用arguments.callee解除与函数名的耦合
+          }
+            }  
+            return newObj;  
+    }; 
+        console.log(obj1);
+    console.log(clone(obj1));
+</code></pre><ol>
+<li><p>用 new obj.constructor ()构造函数新建一个空的对象，可以保持原形链的继承；</p>
+</li>
+<li><p>用obj.hasOwnProperty(key)来判断属性是否来自原型链上，因为for..in..也会遍历其原型链上的可枚举属性。</p>
+</li>
+<li><p>函数用到递归算法，在函数有名字，而且名字以后也不会变的情况下，这样定义没有问题。但问题是这个函数的执行与函数名 factorial 紧紧耦合在了一起。为了消除这种紧密耦合的现象，需要使用 arguments.callee。</p>
+</li>
+</ol>
+<p>##9、图片懒加载、预加载<br>###图片预加载</p>
+<p>即提前加载图片，可保证图片快速、无缝地发布，用户需要查看时可直接从本地缓存中渲染，适用于图片占据很大比例的网站。</p>
+<ol>
+<li>js new image对象 设置src加载</li>
+</ol>
+<pre><code>function preloader(){
+    if (document.images) {
+        var img1 = new Image()
+        var img2 = new Image()
+        var img3 = new Image()
+        img1.src = "";
+        img2.src = "";
+        img3.src = "";
+    }
+}
+
+function addLoadEvent(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'fucntion') {
+        window.onload = func;
+    }else {
+        window.onload = function (){
+            if (oldonload) {
+                oldonload();
+            }
+            func();
+        }
+    }
+}
+addLoadEvent(preloader);
+div.appendChild(img1)//插入到DOM</code></pre><ol start="2">
+<li>Ajax预加载， new Image()对象设置src</li>
+</ol>
+<pre><code>window.onload = function() {
+    setTimeout(function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET',url);
+        xhr.send();
+        xhr = new XMLHttpRequest();
+        xhr.open('GET', url)
+        xhr.send()
+        // preload image
+        new Image().src = '';
+    }, 1000);
+}
+</code></pre><p>###懒加载</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Lazyload 2&lt;/title&gt;
+    &lt;style&gt;
+    img {
+        display: block;
+        margin-bottom: 50px;
+        height: 200px;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src="images/loading.gif" data-src="images/1.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/2.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/3.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/4.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/5.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/6.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/7.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/8.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/9.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/10.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/11.png"&gt;
+    &lt;img src="images/loading.gif" data-src="images/12.png"&gt;
+    &lt;script&gt;
+
+    function throttle(fn, delay, atleast) {//函数绑定在 scroll 事件上，当页面滚动时，避免函数被高频触发，
+        var timeout = null,//进行去抖处理
+        startTime = new Date();
+        return function() {
+        var curTime = new Date();
+        clearTimeout(timeout);
+        if(curTime - startTime &gt;= atleast) {
+            fn();
+            startTime = curTime;
+        }else {
+            timeout = setTimeout(fn, delay);
+        }
+        }
+    }
+    function lazyload() {
+        var images = document.getElementsByTagName('img');
+        var len    = images.length;
+        var n      = 0;      //存储图片加载到的位置，避免每次都从第一张图片开始遍历        
+        return function() {
+        var seeHeight = document.documentElement.clientHeight;
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        for(var i = n; i &lt; len; i++) {
+            if(images[i].offsetTop &lt; seeHeight + scrollTop) {
+                if(images[i].getAttribute('src') === 'images/loading.gif') {
+                 images[i].src = images[i].getAttribute('data-src');
+                }
+            n = n + 1;
+             }
+        }
+        }
+    }
+    var loadImages = lazyload();
+    loadImages();          //初始化首页的页面图片
+    window.addEventListener('scroll', throttle(loadImages, 500, 1000), false);
+　　//函数节流（throttle）与函数去抖（debounce）处理,
+//500ms 的延迟，和 1000ms 的间隔，当超过 1000ms 未触发该函数，则立即执行该函数，不然则延迟 500ms 执行该函数
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p>##10、实现页面加载进度条</p>
+<p>##11、this关键字</p>
+<p>##12、函数式编程</p>
+<p>##13、手动实现parseInt</p>
+<pre><code>function _parseInt (string, radix) {
+    if (typeof string !== "string" &amp;&amp; typeof string !== "number") return NaN;
+    if (radix &amp;&amp; (typeof radix !== "number" || /^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$/.test(radix) || radix &gt; 36 || radix &lt; 2)) return NaN;
+    string = String(string)
+    var rexp = (radix == 10) ? /(-?)([0]?)([0-9]+)/ : /(-?)([0]?[Xx]?)([0-9a-fA-F]+)/,
+        a = string.match(rexp),
+        sign = a[1],
+        rawRadix = a[2],
+        rawNum = a[3],
+        result = 0,
+        strArr = rawNum.split(''),
+        len = strArr.length,
+        numArr = [];
+    if (a &amp;&amp; !radix) {
+        if ( rawRadix.toUpperCase() === "0X") {
+            radix = 16;
+        } else if (rawRadix === "0") {
+            radix = 8;
+        } else {
+            radix = 10;
+        }
+    }
+    for (var i = 0; i &lt; len; i++){
+        var num;
+        var charCode = strArr[i].toUpperCase().charCodeAt(0);
+        if(radix &lt;=36 &amp;&amp; radix &gt;= 11) {
+            if (charCode &gt;= 65 &amp;&amp; charCode &lt;= 90) {
+                num = charCode - 55;
+            } else {
+                num = charCode - 48;
+            }
+        }  else {
+            num = charCode - 48;
+        }
+        if (num &lt; radix) {
+            numArr.push(num);
+        } else {
+            return NaN
+        };
+    }
+    if(numArr.length &gt; 0) {
+      numArr.forEach(function(item, j){
+          result += item * Math.pow(radix, numArr.length-j-1);
+      })
+    }
+    if(sign === "-"){
+      result = -result;
+    }
+    return result
+}
+
+// 以下例子均返回15:
+console.log(_parseInt("F", 16));
+console.log(_parseInt("17", 8));
+console.log(_parseInt("15", 10));
+console.log(_parseInt(15.99, 10));
+console.log(_parseInt("FXX123", 16));
+console.log(_parseInt("1111", 2));
+console.log(_parseInt("15*3", 10));
+console.log(_parseInt("12", 13));
+
+// 以下例子均返回 NaN:
+console.log(_parseInt("Hello", 8)); // Not a number at all
+console.log(_parseInt("546", 2));   // Digits are not valid for binary representations
+
+// 以下例子均返回 -15：
+console.log(_parseInt("-F", 16));
+console.log(_parseInt("-0F", 16));
+console.log(_parseInt("-0XF", 16));
+console.log(_parseInt(-15.1, 10));
+console.log(_parseInt(" -17", 8));
+console.log(_parseInt(" -15", 10));
+console.log(_parseInt("-1111", 2));
+console.log(_parseInt("-15e1", 10));
+console.log(_parseInt("-12", 13));
+// 下例中也全部返回 17，因为输入的 string 参数以 "0x" 开头时作为十六进制数字解释，而第二个参数假如经过 Number 函数转换后为 0 或 NaN，则将会忽略。
+console.log(_parseInt("0x11", 16));
+console.log(_parseInt("0x11", 0));
+console.log(_parseInt("0x11"));
+
+// 下面的例子返回 224
+console.log(_parseInt("0e0",16));
+</code></pre><p>##14、为什么会有同源策略</p>
+<ul>
+<li>协议、域名、端口号一致，表示同源</li>
+<li>不能通过ajax请求不同源的数据，不能通过脚本操作不同域下的DOM</li>
+<li>设置同源限制主要是为了安全，如果没有同源限制存在浏览器中的cookie等其他数据可以任意读取，不同域下DOM任意操作，ajax任意请求的话如果浏览了恶意网站那么就会泄漏这些隐私数据</li>
+</ul>
+<p>##15、怎么判断两个对象是否相等</p>
+<pre><code>// 传入两个对象
+function isObjectValueEqual(a, b) {
+    // Object.getOwnPropertyNames()
+    var aProps = Object.getOwnPropertyNames(a);
+    var bProps = Object.getOwnPropertyNames(b);
+    if (aProps.length != bProps.length) {
+        return false;
+    }
+    for (var i = 0; i &lt; aProps.length; i++) {
+        var propName = aProps[i];
+
+        if (a[propName] !== b[propName]) {
+            return false;
+        }
+    }
+    return true;
+}</code></pre><p>##16、事件模型</p>
+<p>###事件与事件流</p>
+<p>事件是浏览器与文档交互的瞬间，比如点击按钮，填写表格等操作，它是Javascript与HTML之间沟通的桥梁，DOM是树状结构，如果同时给父节点绑定时间，触发子节点时，两个事件发生的顺序就牵涉到事件流的内容，它描述的是页面接受事件的顺序，事件流描述的是从页面接受事件的顺序，但是IE的事件流食冒泡流，而Netspace Communicator的事件流是捕获流</p>
+<ul>
+<li>IE的事件流叫做事件冒泡。即事件开始由最具体的元素接收，然后逐级向上传播到不具体的节点。事件捕获则相反，是不太具体的节点硬更早接收事件，具体的节点应该最后接收事件。</li>
+</ul>
+<ol>
+<li>DOM0级事件模型</li>
+</ol>
+<p>是早期的事件模型，又称为原始事件模型，在该模型中，事件不会传播，即没有事件流的概念。事件绑定监听函数较为简单，要使用js指定事件处理程序，首先取得一个要操作的对象的引用。<br>每个元素都有自己的事件处理属性，通常全部小写，例如onclick，设置为函数即可指定事件处理程序：</p>
+<pre><code>btn = document.getElementById("myBtn" = "Clicked!")
+
+// HTML事件处理程序
+&lt;form method = "post"&gt;
+    &lt;input type="text" name="username" value=""&gt;
+    &lt;input type="button" value="Username" onclick="alert(username.value)"&gt;
+&lt;/form&gt;</code></pre><ol start="2">
+<li>DOM2级事件模型</li>
+</ol>
+<p>在该模型中，分为三个过程：事件捕获，处于目标阶段，事件冒泡阶段</p>
+<ul>
+<li>事件捕获阶段。事件从document一直向下传播到目标元素，依次检查经过的节点是否绑定了时间监听函数，如果有则执行</li>
+<li>事件处理阶段。事件达到目标元素，触发目标元素的监听函数</li>
+<li>事件冒泡阶段。事件从目标元素冒泡到document，一次检查经过节点是否绑定了事件监听函数，如果有则执行，定义了两个方法addEventListener()和removeEventListener()。所有DOM节点都包含这两个方法，并且有三个参数，要处理的事件名、作为事件处理程序的函数和一个布尔值。要在click事件添加事件处理程序，可以用： </li>
+</ul>
+<pre><code>var btn = document.getElementById("myBtn");
+btn.addEventListener("click",function(){
+    alert(this.id);
+}, false);
+btn.addEventListener("click",function(){
+    alert("Hello kid")
+},false)</code></pre><p>执行顺序为”myBtn”,”Hello kid”。IE中执行顺序相反</p>
+<p>移除事件监听方式如下</p>
+<pre><code>btn.removeEventListener("click")</code></pre><ol start="3">
+<li>IE中的事件模型</li>
+</ol>
+<pre><code>var btn = document.getElementById("myBtn");var handler = function() {
+
+    alert(this.id);
+
+};
+
+btn.attachEvent("onclick", handler);//添加事件处理程序btn.detachEvent("onclick", handler);//删除事件处理程序</code></pre><p>###事件委托、代理<br>利用事件冒泡的原理，把目标事件委托给父元素</p>
+<p>优点: </p>
+<ol>
+<li>管理函数变少了，不需要为每个元素都添加监听函数，对于同一个父节点下面类似的子元素，可以通过委托给父元素的监听函数来处理</li>
+<li>可以方便地动态添加和修改元素，不需要因为元素的改动而修改事件绑定。（比如后来添加子元素依然拥有事件）</li>
+<li>JavaScript和DOM节点之间的关联变少了，这样也就减少了因循环引用而带来的内存泄漏发生的概率。</li>
+</ol>
+<p>###应用场景</p>
+<p>很多商品放在一个ul下面的li标签里面，点击添加或删除商品，就可以绑定商品的父元素ul标签，通过事件代理去找到要点击的商品，完成添加删除事件</p>
+<p>###如何让事件先冒泡后捕获</p>
+<p>##17、window的onload事件和domcontentloaded</p>
+<ol>
+<li>当onload触发时，页面上所有的DOM，CSS，script，图片，flash等全部加载完成了</li>
+<li>DOMContentLoaded事件触发时，仅仅DOM加载完成，其余均未完成</li>
+</ol>
+<p>##18、for…in迭代和for…of有什么区别</p>
+<p>###for in</p>
+<pre><code>// for in 应用于数组
+
+Array.prototype.sayHello = function(){
+    console.log("Hello")
+}
+Array.prototype.str = "world";
+var myArray = [1,2,10,30,100];
+myArray.name = "数组"
+
+for(let index in myArray) {
+    console.log(index);
+}
+// 结果: "0" "1" "2" "3" "4" "name" "sayHello" "str"</code></pre><pre><code>// for in 应用于对象中
+Object.prototype.sayHello = function(){
+    console.log('Hello');
+}
+Object.prototype.str = "World";
+var myObject = {name: 'hanlei', age:100};
+
+for(let index in myObject){
+    console.log(index);
+}
+
+// 输出结果："name" "age" "sayHello" "str"
+// 首先输出的是对象的属性名，再是对象原型的属性和方法
+//如果不想让其输出原型中的属性和方法，可以使用hasOwnProperty方法进行过滤
+
+for (let index in myObject){
+    if(myObject.hasOwnProperty(index)){
+        console.log(index)
+    }
+}
+// 输出结果为: "name" "age"
+// 也可以通过Object.keys()方法获取所有的自身可枚举属性组成的数组
+Object.keys(myObject)</code></pre><p>经观察，for in应用于数组返回是数组下标和属性和原型上的方法和属性，而对象中返回的是对象的属性名和原型中的方法和属性<br>for in遍历数组时，会存在几个问题</p>
+<ol>
+<li>index索引为字符串，不能进行运算</li>
+<li>遍历顺序有可能不是按照数组内部顺序</li>
+<li>for in会遍历所有可枚举属性，包括原型</li>
+</ol>
+<p>###for of</p>
+<pre><code>Object.prototype.sayHello = function(){
+    console.log('Hello');
+}
+var myObject =  {
+    name: 'hanlei',
+    age: 100
+}
+
+for(let key of myObject){
+    console.log(key)
+}
+// 结果：TypeError
+
+Array.prototype.sayHello = function(){
+    console.log('hello');
+}
+var myArray = [1,2 ,1231,1,56877]
+for (let key of myArray) {
+    console.log(key);
+}</code></pre><p>for of遍历的是数组的元素值</p>
+<p>总结: </p>
+<ol>
+<li>遍历对象用for in，遍历数组使用for of</li>
+<li>for in循环出的是key，for of循环出的是value</li>
+<li>注意 for of是ES6新特性，为了修复ES5for in的不足</li>
+<li>for of 不能遍历普通对象，需要通过Object。keys()搭配使用</li>
+</ol>
+<p>##19、函数柯里化</p>
+<p>柯里化(currying),是把接受多个参数的函数变换成接受一个单一参数的函数，并返回接受剩下参数且返回结果的新函数的技术。<br>即只传给函数一部分参数调用它，让它返回一个函数，去处理剩下的参数</p>
+<pre><code>function add(x, y, z) {
+    return x + y + z;
+}
+console.log(add(1, 2, 3))//6
+
+var add = function(x) {
+    return function(y) {
+        return funciton (z) {
+            return x + y + z;
+        }
+    }
+}
+var addOne = add(1);
+var addOneAndTwo = addOne(2);
+var addOnetoThree = addOneAndTwo(3);
+console.log(addOnetoThree)</code></pre><p>通过闭包记住第一个参数以此类推，可以用ES6的箭头函数写成这样：</p>
+<pre><code>const add = x =&gt; y =&gt; z =&gt; x + y + z</code></pre><p>##20、call apply区别，原生实现bind</p>
+<p>bind,apply,bind方法，其实是函数的另外一种调用方法，功能上等同于<code>fn</code>,只是调用者由bind，apply，call来决定，也就是<code>bind,apply,call</code>指定函数执行上下文</p>
+<p>声明一个函数后，基本调用方式为：</p>
+<pre><code>// 方法定义
+
+var obj = {
+    todo: function(){
+        console.log("rushB");
+    }
+}
+// 调用
+obj.todo();// "rushB"</code></pre><pre><code>// 函数声明
+function todo() {
+    cosole.log("rushA");
+}
+// 调用
+todo();</code></pre><pre><code>// 函数表达式
+var todo = function() {
+    console.log("rush不动了")
+}
+// 调用方法
+todo()</code></pre><p>接下里用<code>bind,apply,call</code>对上面进行改写</p>
+<pre><code>var obj = {
+    todo: function() {
+        console.log("rushA");
+    }
+}
+// 调用方式
+obj.todo.apply();
+obj.todo.call();
+obj.todo.bind()();
+
+// 函数声明
+function todo() {
+    console.log("rushB");
+}
+
+// 调用方式
+var todo = function() {
+    console.log("rush不动了")
+}
+
+// 函数表达式
+todo.apply();
+todo.call();
+todo.bind()();</code></pre><p>可以传参数，第一个参数就是受益者，this的指向对象，第二个参数是arguments</p>
+<pre><code>fn.apply(otherObj);
+fn.call(otherObj);
+fn.bind(otherObj)()</code></pre><p>需要调用this才生效</p>
+<pre><code>var csgo = "rushAB";
+var obj = {
+    csgo: "rushA",
+    fn: function(){
+        console.log(this.csgo)
+    }
+}
+
+obj.fn()
+
+//this指向window，获得想要的window上的属性
+obj.fn.apply(window)
+obj.fn.call(window)
+obj.fn.bind(window)()
+
+如果将this换成obj
+var obj = {
+    csgo: "rushA",
+    fn: function(){
+        console.log(obj.csgo)
+    }
+}
+obj.fn()
+
+//this指向window，没有获得window上的属性
+obj.fn.apply(window)
+obj.fn.call(window)
+obj.fn.bind(window)()</code></pre><p>三个方法允许我们明确指定方法中的this指向</p>
+<p>###bind,aplly,call的区别</p>
+<ul>
+<li><p>apply 和 call 的用法几乎相同, 唯一的差别在于当函数需要传递多个变量时, apply 可以接受一个数组作为参数输入, call 则是接受一系列的单独变量。</p>
+</li>
+<li><p>在上面的代码片段中，我们可以看出bind使用方法和apply， call 不一样，多了一个执行()。那是因为bind在函数调用后，实际上会返回一个新函数。</p>
+</li>
+<li><p>bind,aplly,call中只有apply接收一个数组，可以通过apply和array两个单词尾部都是y记忆。bind,call则都是接收一系列单独变量。</p>
+</li>
+</ul>
+<p>####注意</p>
+<p>Array.prototype.slice.apply.(obj)，可以让一个类数组对象使用数组的方法，类数组主要是指通过DOM 操作获取的DomList 和arguments，都是具有length属性的对象。</p>
+<p>Object.prototype.toString.call(obj).slice(8, -1) 方法获取对象属性，比typeof()更可信。<br>在 ES6 的箭头函数下, call 和 apply 的失效<br>不可以当作构造函数, 也就是说不可以使用 new 命令, 否则会抛出一个错误</p>
+<p>###call，apply，bind 三者用法和区别：角度可为参数、绑定规则（显示绑定和强绑定），运行效率、运行情况。<br>##21、async/await<br>##22、立即执行函数和使用场景<br>##23、设计模式(要求说出如何实现,应用,优缺点)/单例模式实现<br>##24、iframe的缺点有哪些<br>##25、数组问题</p>
+<ul>
+<li>数组去重</li>
+</ul>
+<ol>
+<li>遍历数组法</li>
+</ol>
+<p>实现思路：新建一个数组，遍历去要重的数组，当值不在新数组的时候（indexOf为-1）就加入该新数组中</p>
+<pre><code>var arr=[2,8,5,0,5,2,6,7,2];
+function unique1(arr){
+  var hash=[];
+  for (var i = 0; i &lt; arr.length; i++) {
+     if(hash.indexOf(arr[i])==-1){
+      hash.push(arr[i]);
+     }
+  }
+  return hash;
+}</code></pre><ol start="2">
+<li>数组下标判断法</li>
+</ol>
+<p>实现思路：如果当前数组的第 i 项在当前数组中第一次出现的位置不是 i，那么表示第 i 项是重复的，忽略掉。否则存入结果数组。</p>
+<pre><code>function unique2(arr){
+  var hash=[];
+  for (var i = 0; i &lt; arr.length; i++) {
+     if(arr.indexOf(arr[i])==i){
+      hash.push(arr[i]);
+     }
+  }
+  return hash;
+}</code></pre><ol start="3">
+<li>排序后相邻去除</li>
+</ol>
+<p>实现思路：给传入的数组排序，排序后相同的值会相邻，然后遍历排序后数组时，新数组只加入不与前一值重复的值</p>
+<pre><code>function unique3(arr){
+  arr.sort();
+  var hash=[arr[0]];
+  for (var i = 1; i &lt; arr.length; i++) {
+     if(arr[i]!=hash[hash.length-1]){
+      hash.push(arr[i]);
+     }
+  }
+  return hash;
+}</code></pre><ol start="4">
+<li>优化遍历数组法</li>
+</ol>
+<p>实现思路：双层循环，外循环表示从0到arr.length，内循环表示从i+1到arr.length</p>
+<p>将没重复的右边值放入新数组。（检测到有重复值时终止当前循环同时进入外层循环的下一轮判断）</p>
+<pre><code>function unique4(arr){
+  var hash=[];
+  for (var i = 0; i &lt; arr.length; i++) {
+    for (var j = i+1; j &lt; arr.length; j++) {
+      if(arr[i]===arr[j]){
+        ++i;
+      }
+    }
+      hash.push(arr[i]);
+  }
+  return hash;
+}</code></pre><ol start="5">
+<li>set</li>
+</ol>
+<pre><code>let arr = [4, 1, 3, 3, 2, '2'];
+let uniqueArr = [...new Set(arr)];
+console.log(uniqueArr); // [4, 1, 3, 2, "2"]</code></pre><h3 id="数组常用方法"><a href="#数组常用方法" class="headerlink" title="数组常用方法"></a>数组常用方法</h3><pre><code>split()//字符串 -&gt;数组转换
+join()//数组 -&gt;字符串转换, 转换时可以添加符号, 还有一个是toString()
+indexOf()
+  //查找元素返回第一个与参数相同的元素的索引。有另外函数 lastIndexOf()，
+  //该函数返回相同元素中最后一个元素的索引，如果没找到相同元素，则返回 -1
+
+push()
+pop()
+unshift()
+shift()
+
+concat()
+splice()
+reverse()
+sort()
+
+forEach()
+every()
+some()
+reduce(function (runningTotal, currentValue) {
+  return runningTotal +   currentValue;
+})
+//reduceRight()
+
+map()
+filter()</code></pre><ul>
+<li>查找数组重复项</li>
+</ul>
+<ol>
+<li>利用sort方法，先使用sort方法将数组排序，再来判断找出重复元素</li>
+</ol>
+<pre><code>// arrayObject.sort(sortby) 可选参数sortby，必须是函数
+
+function  res(arr){
+    var temp = [];
+    //    排序之后 相邻对比
+    arr.sort().sort(function(a,b){
+        if(a === b&amp;temp.indexOf(a)===-1){
+            temp.push(a)
+        }
+    })
+    return temp;
+}
+
+var arr = [1,2,3,3,3,3,4,4,5,6,7,7,9,5,4,3,7,7]
+console.log(arr.sort())
+console.log(res(arr));</code></pre><ul>
+<li>扁平化数组</li>
+</ul>
+<ul>
+<li>按数组中各项和特定值差值排序</li>
+</ul>
+<p>##26、BOM(Browser Object Model)属性对象方法</p>
+<p>##27、服务端渲染<br>##28、垃圾回收机制<br>##29、eventloop<br>进程和线程<br>任务队列<br>##30、如何快速让字符串变成已千为精度的数字</p>
+<p>#ES6</p>
+<p>##1、声明 let、const</p>
+<ul>
+<li>let声明了一个块级作用域的变量，同一个函数或同一个作用域用let重复定义一个变量会typeError</li>
+<li>const声明的变量不能改变值，必须立刻初始化</li>
+</ul>
+<p>##2、解构赋值<br>解构赋值语法是一个种js表达式，通过结构赋值，可将<strong>属性/值</strong>从<strong>对象/数组</strong>中取出，赋值给其他变量</p>
+<p>###数组解构</p>
+<pre><code>let [a, b, c] = [1, 2, 3] //a = 1, b = 2, c = 3
+let [d, [e], f] = [1, [2], 3] // 嵌套数组解构 d=1, e=2, f=3
+let [g, ...h] = [1, 2, 3] //数组拆分 g=1, h=[2, 3]
+let [i,,j] = [1, 2, 3]// 不连续解构 i=1, j=3
+let [k,l] = [1, 2, 3] // 不完全解构 k=1, l=2</code></pre><p>###对象解构</p>
+<pre><code>let {a, b} = {a: 'aaaa', b: 'bbbb'} // a = 'aaaa' b='bbbb'
+let obj = {d: 'aaaa', e:{f: 'bbbb'}}
+let {d, e:{f}} = obj // 嵌套解构 d='aaaa' f='bbbb'
+let g;
+(g = {g: 'aaaa'})// 以声明变量解构 g= 'aaaa'
+let [h, i, j, k] = 'nice' // 字符串解构 h='n' i='i' j='c' k='e'</code></pre><p>##3、声明类与继承：class、extend</p>
+<p>##4、Promise的使用与实现</p>
+<p>##5、generator（异步编程、yield、next()、await 、async）</p>
+<p>##6、箭头函数this指向问题、拓展运算符</p>
+<p>##7、map和set有没有用过，如何实现一个数组去重，map数据结构有什么优点？</p>
+<p>##8、ES6怎么编译成ES5,css-loader原理,过程</p>
+<p>##9、ES6转成ES5的常见例子</p>
+<p>使用es5实现es6的class</p>
+<p>#浏览器</p>
+<p>##1、输入url到展示页面过程发生了什么？</p>
+<ol>
+<li>浏览器会先把url域名解析成对应ip(DNS解析)</li>
+<li>解析成ip之后建立与服务器的连接(三次握手)<br></li>
+</ol>
+<blockquote>
+<ol>
+<li>客户端发送syn包(syn=j)到服务器，并进入SYN_SENT状态，等待服务器确认</li>
+<li>服务器收到syn包，必须确认客户的SYN(ack=j+1),同时自己也发送一个SYN包(syn=k),即SYN+ACK包，此时服务器进入SYN_RECV状态</li>
+<li>客户端收到服务器的SYN+ACK包，向服务器发送确认包(ack=k+1)<br>成功之后客户端和服务器进入ESTABLISHED状态，完成三次握手<br>三次握手的目的是为了防止已失效的连接请求报文段突然又传到了服务端，因而产生错误</li>
+</ol>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/3871772-948476074feb71ed.png?imageMogr2/auto-orient/" alt="三次握手"><br>3. 与服务器建立连接之后，发送请求<br>4. 服务器接受请求之后，处理请求并完成响应<br>5. 浏览器的接受数据和页面渲染，构建DOM树</p>
+<blockquote>
+<ol>
+<li>根据 HTML 解析 DOM 树<br><br> 根据 HTML 的内容，将标签按照结构解析成为 DOM 树，DOM 树解析的过程是一个深度优先遍历。即先构建当前节点的所有子节点，再构建下一个兄弟节点。<br><br> 在读取 HTML 文档，构建 DOM 树的过程中，若遇到 script 标签，则 DOM 树的构建会暂停，直至脚本执行完毕。</li>
+<li>根据 CSS 解析生成 CSS 规则树<br><br> 解析 CSS 规则树时 js 执行将暂停，直至 CSS 规则树就绪。<br>    浏览器在 CSS 规则树生成之前不会进行渲染。</li>
+<li>结合 DOM 树和 CSS 规则树，生成渲染树<br><br> DOM 树和 CSS 规则树全部准备好了以后，浏览器才会开始构建渲染树。<br> 精简 CSS 并可以加快 CSS 规则树的构建，从而加快页面相应速度。</li>
+<li>根据渲染树计算每一个节点的信息（布局）<br><br> 布局：通过渲染树中渲染对象的信息，计算出每一个渲染对象的位置和尺寸<br> 回流：在布局完成后，发现了某个部分发生了变化影响了布局，那就需要倒回去重新渲染。</li>
+<li>根据计算好的信息绘制页面<br><br> 绘制阶段，系统会遍历呈现树，并调用呈现器的“paint”方法，将呈现器的内容显示在屏幕上。<br><br> 重绘：某个元素的背景颜色，文字颜色等，不影响元素周围或内部布局的属性，将只会引起浏览器的重绘。<br><br> 回流：某个元素的尺寸发生了变化，则需重新计算渲染树，重新渲染。</li>
+</ol>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/3871772-21d4089079eae37a.png?imageMogr2/auto-orient/" alt="页面渲染"><br>6. 关闭TCP连接(四次挥手)<br><img src="https://upload-images.jianshu.io/upload_images/3871772-a0ba339fbd06fdba.png?imageMogr2/auto-orient/" alt="四次挥手"></p>
+<blockquote>
+<p>1.发起方向被动方发送报文，Fin、Ack、Seq，表示已经没有数据传输了。并进入 FIN_WAIT_1 状态。(第一次挥手：由浏览器发起的，发送给服务器，我请求报文发送完了，你准备关闭吧)</p>
+</blockquote>
+<blockquote>
+<p>2.被动方发送报文，Ack、Seq，表示同意关闭请求。此时主机发起方进入 FIN_WAIT_2 状态。(第二次挥手：由服务器发起的，告诉浏览器，我请求报文接受完了，我准备关闭了，你也准备吧)</p>
+</blockquote>
+<blockquote>
+<p>3.被动方向发起方发送报文段，Fin、Ack、Seq，请求关闭连接。并进入 LAST_ACK 状态。(第三次挥手：由服务器发起，告诉浏览器，我响应报文发送完了，你准备关闭吧)</p>
+</blockquote>
+<blockquote>
+<p>4.发起方向被动方发送报文段，Ack、Seq。然后进入等待 TIME_WAIT 状态。被动方收到发起方的报文段以后关闭连接。发起方等待一定时间未收到回复，则正常关闭。(第四次挥手：由浏览器发起，告诉服务器，我响应报文接受完了，我准备关闭了，你也准备吧)</p>
+</blockquote>
+<p>##2、重绘与回流<br>重绘(repaint): 当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要UI层面的重新像素绘制，因此 损耗较少<br>回流(reflow): 当元素的尺寸、结构或触发某些属性时，浏览器会重新渲染页面，称为回流。此时，浏览器需要重新经过计算，计算后还需要重新页面布局，因此是较重的操作。会触发回流的操作:</p>
+<p>页面初次渲染<br>浏览器窗口大小改变<br>元素尺寸、位置、内容发生改变<br>元素字体大小变化<br>添加或者删除可见的 dom 元素<br>激活 CSS 伪类（例如：:hover）<br>查询某些属性或调用某些方法<br>clientWidth、clientHeight、clientTop、clientLeft<br>offsetWidth、offsetHeight、offsetTop、offsetLeft<br>scrollWidth、scrollHeight、scrollTop、scrollLeft<br>getComputedStyle()<br>getBoundingClientRect()<br>scrollTo()</p>
+<p>回流必定触发重绘，重绘不一定触发回流。重绘的开销较小，回流的代价较高。<br>3、防抖与节流<br>4、cookies、session、sessionStorage、localStorage<br>5、浏览器内核<br>#服务端与网络<br>##1、常见状态码<br>##2、缓存<br>200 From cache和200 ok<br>400,401,403状态码分别代表什么<br>浏览器缓存<br>##3、cookie, session, token<br>##4、前端持久化的方式、区别<br>##5、DNS是怎么解析的</p>
+<ol>
+<li>用户主机上运行着DNS的客户端，就是我们PC机或者手机客户端运行着DNS客户端了</li>
+<li>浏览器将接受到的url抽出域名字段，就是访问的主机名，比如<a href="http://www.baidu.com，并传给DNS应用的客户端" target="_blank" rel="noopener">www.baidu.com，并传给DNS应用的客户端</a></li>
+<li>DNS客户端向DNS服务器端发送一份查询报文，报文中包含着要访问的主机名字段</li>
+<li>DNS客户机最终会收到一份回答报文，其中包含有该主机名IP</li>
+<li>一旦浏览器收到了DNSip地址，就可以向IP地址定位的HTTP服务器发起TCP链接</li>
+</ol>
+<p>##6、cdn<br>##7、计算机网络的相关协议<br>##8、http/https/http2.0<br>##9、get post区别</p>
+<ol>
+<li>GET后退按钮/刷新无害，而POST会重新提交数据</li>
+<li>GET书签可收藏，POST为书签不可收藏</li>
+<li>GET能缓存，POST不能缓存</li>
+<li>GET编码类型application/x-www-form-url，POST编码类型encodedapplication/x-www-form-urlencoded或multipart/form-data，为二级制数据使用多重编码</li>
+<li>GET历史参数保留在浏览器历史中，POST参数不会保存在浏览器历史中</li>
+<li>GET对数据有长度限制，发送数据的时候，GET方法向URL添加数据；URL长度是受限的，POST无限制</li>
+<li>GET只允许ASCII字符。POST无限制，允许二进制数据</li>
+<li>与POST相比，GET安全性差，明文发送 拼接URL</li>
+<li>POST比GET安全，因为参数不会保存在浏览器历史或web服务器日志中</li>
+<li>ET的数据在URL中对所有人都是可见的。POST的数据不会显示在URL中</li>
+</ol>
+<p>##10、ajax、 axios库</p>
+<pre><code>axios.get(url,{
+    params: {
+        ID: 123456
+    }
+}).then(function(res) {
+    console.log(res)
+}).catch((err)=&gt; {
+    console.log(err)
+})</code></pre><pre><code>axios.request(config)
+
+axios.get(url[, config])
+axios('/user/12345', {
+  method: 'get',
+  params: {
+    firstName: 'Fred',
+    lastName: 'Flintstone'
+  }
+});
+
+axios.post(url[, data[, config]])
+axios.delete(url[, config])
+axios.head(url[, config])
+axios.put(url[, data[, config]])
+axios.patch(url[, data[, config]])</code></pre><p>##11、tcp三次握手，四次挥手流程</p>
+<p>##12、跨域<br>##13、前端安全XSS、CSRF<br>##14、websocket<br>##15、Http请求中的keep-alive有了解吗<br>##16、网络分层<br>##17、即时通信，除了Ajax和websocket<br>##18、模块化，commonJS，es6，cmd，amd</p>
+<p>#Vue</p>
+<p>##1、vue解决了什么问题<br>解决了数据和控件双向绑定问题<br>##2、MVVM的理解<br>MVVM是Model-View-ViewModel的缩写，</p>
+<p>优点: </p>
+<ol>
+<li>主要目的是分离视图和模型</li>
+<li>降低代码耦合，提高视图或者逻辑的重用性</li>
+<li>提高了模块的可测试性<br>##3、如何实现一个自定义组件，不同组件之间如何通信的？</li>
+</ol>
+<pre><code>&lt;template&gt;
+    &lt;div class="contact-list"&gt;&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+    export default {
+        name: "contact-list",
+        props:['basicInfo'],
+    }
+&lt;/script&gt;
+
+&lt;style scoped lang="stylus" rel="stylesheet/stylus"&gt;
+    .contact-list
+        padding: 30px 0
+        text-align center
+        background-color: #2C8FA1
+&lt;/style&gt;</code></pre><p>父传子：父组件=&gt; :dataname=”dataname”<br>子组件 =&gt; props:[‘dataname’]</p>
+<p>子传父：父组件=&gt; @eventName = “”<br>##4、nextTick</p>
+<p>##5、生命周期<br>##6、虚拟dom的原理<br>##7、双向绑定的原理？数据劫持？<br>##8、组件通信<br>###父-&gt;子<br>###子-&gt;父<br>###非父子组件<br>##9、Proxy 相比于 defineProperty 的优势<br>##10、watch computed区别<br>##11、virtual dom 原理实现<br>##12、vue-router(hash， HTML5 新增的 pushState<br>单页应用，如何实现其路由功能—路由原理<br>vue-router如何做用户登录权限等<br>你在项目中怎么实现路由的嵌套</p>
+<p>##13、vuex的理解</p>
+<ol>
+<li><p>Vuex是什么？怎么使用？哪种功能场景使用</p>
+<p> Vuex是vue的状态管理。在main.js中引入stroe，注入新建目录store，….export。场景：单页应用中，组件之间的状态，音乐播放，登陆状态，加入购物车</p>
+</li>
+<li><p>Vuex有哪几种属性<br>Vuex有五种核心属性</p>
+</li>
+</ol>
+<ul>
+<li>state =&gt; 基本数据</li>
+<li>getters =&gt; 从基本数据派生的数据</li>
+<li>mutations =&gt; 提交更改数据的方法，同步</li>
+<li>actions =&gt; 像一个装饰器，包裹mutations，使之可以异步</li>
+<li>modules =&gt; 模块化Vuex</li>
+</ul>
+<ol start="3">
+<li>不用Vuex会有什么问题</li>
+</ol>
+<p>##14. 组件动态加载，组件懒加载<br>##15. 动态加载路由，路由懒加载</p>
+<pre><code></code></pre><p>##16. watch里面有什么属性</p>
+<ul>
+<li>watch使用的几种方法</li>
+</ul>
+<ol>
+<li><p>通过watch监听data数据变化，数据变化时会打印当前值</p>
+<pre><code>watch: {
+ data(val, newval) {
+     console.log(val);
+     console.log(newval);
+ }
+}</code></pre></li>
+<li><p>通过watch监听docData数据的变化，数据发生变化时，this.change_number++(使用深度监听)</p>
+</li>
+</ol>
+<pre><code>watch: {
+    docData: {
+        handler(newVal) {
+            this.change_number++
+        },
+        deep: true
+    }
+}</code></pre><ol start="3">
+<li>通过watch监听data数据的变化，数据发生变化时，执行changeData方法</li>
+</ol>
+<pre><code>watch: {
+    data: 'changeData' // 值可以为methods的方法名
+},
+methods: {
+    changeData(curVal,oldVal) {
+        console.log(curVal,oldVal)
+    }
+}</code></pre><ul>
+<li>详解watch中的immediate、handle和deep属性</li>
+</ul>
+<ol>
+<li>immediate和handler</li>
+</ol>
+<p>这样使用watch时有一个特点，就是当值第一次绑定时，不会执行监听函数，只有值发生改变才会执行，如果我么需要最初绑定值的时候也执行函数，就需要<code>immeditae</code>属性</p>
+<pre><code>watch: {
+    docData: {
+        handler(newVal) {
+            this.change_number++
+        },
+        immediate: true
+    }
+}</code></pre><ol start="2">
+<li>deep</li>
+</ol>
+<p>当需要监听一个对象的改变时，普通的watch方法无法监听到对象内部属性的改变，此时就需要deep对对象进行深度监测</p>
+<pre><code>data (){
+    return {
+        docData: {
+            'doc_id': 1,
+            'tpl_data': 'abc'
+        }
+    }
+},
+watch: {
+    docData: {
+        handler(newVal) {
+            this.change_number++
+        },
+        deep: true
+    }
+}</code></pre><p>设置deep:true则可以监听到docData.doc_id的变化，此时会给docData所以属性都加上这个监听器，当对象属性较多时，每个属性值的变化都会执行handler，如果只需要监听对象中的一个属性值，则可以做一下优化：使用字符串的形式监听对象属性：</p>
+<pre><code>data () {
+    return {
+        docData: {
+            'doc_id': 1,
+            'tpl_data': 'abc'
+        }
+    }
+},
+watch: {
+    'docData.doc_id': {
+        handler(newVal, oldVal) {
+            .......
+        },
+        deep: true;
+    }
+}</code></pre><p>#前端性能优化<br>##页面DOM节点太多，会出现什么问题？如何优化？<br>DOM太多会造成页面加载卡顿，</p>
+<ul>
+<li>操作DOM节点</li>
+</ul>
+<ol>
+<li>在外部更新节点然后与原始节点互换<br>使用cloneNode在外部更新节点然后在通过replace替换</li>
+</ol>
+<pre><code>var orig = document.getElementById('cont');
+var clone = orig.cloneNode(true)
+var list = ['a','b'];
+var content;
+for(var i = 0;i&lt;list.length;i++){
+    content = document.createTextNode(list[i]);
+    clone.appendChild(content);
+}
+orig.parentNode.replaceChild(clone,orig)
+</code></pre><ol start="2">
+<li>在对DOM操作之前，把要操作的元素，先从当前DOM结构中删除，设置元素<code>display: none</code></li>
+<li>DOM的多个读写操作，应该放在一起，并且不要在两个读操作之间加入一个写操作</li>
+</ol>
+<ul>
+<li>新增DOM节点</li>
+</ul>
+<ol>
+<li><p>在对当前DOM进行操作之前，尽可能多的做一些准备工作，保证N次创建，1次写入。优化的方法是创建DocumentFragment，在其中插入节点后再添加到页面。如JQuery中所有的添加节点的操作如append，都是最终调用DocumentFragment来实现的</p>
+</li>
+<li><p>添加结构外的元素尽量设置他们的位置为fixed或absolute</p>
+</li>
+<li><p>不要一条条的改变样式，而要通过改变class或者csstext属性，一次性改变样式</p>
+</li>
+<li><p>减少DOM元素数量，正面页面应小于1000</p>
+</li>
+</ol>
+<pre><code>document.getElementsByTagName( '*' ).length</code></pre><ol start="5">
+<li>避免表格布局，重绘重排成本要高于div</li>
+<li>把获取的DOM数据缓存起来</li>
+</ol>
+<pre><code>el.className += "theclassname";
+el.style.cssText += ";left:" + left + "px;top:" + top + "px"</code></pre><p>##如何做性能监测<br>##SEO和语义化<br>这个没被问过<br>#微信小程序<br>微信小程序和h5差异，如果有开发weex的经验，可能会加上weex<br>#git<br>一些基本命令<br>#打包工具webpack<br>1、打包原理<br>2、打包插件<br>3、webpack热更新原理<br>4、优化构建速度<br>#算法<br>##1、排序算法</p>
+<p>2、动态规划，参见背包问题<br>3、二叉树<br>4、加油站问题(贪心算法)<br>5、二分法<br>6、二叉树遍历<br>7、单链表反转<br>8、取1000个数字里面的质数<br>9、找出数组中和为给定值的两个元素，如：[1, 2, 3, 4, 5]中找出和为6的两个元素。<br>10、线性顺序存储结构和链式存储结构有什么区别？以及优缺点<br>移动端<br>1、自适应<br>2、pwa<br>3、移动端手势<br>附加题<br>1、无限滚动方案<br>2、如何处理兼容性问题<br>3、你遇到过最难的问题是什么<br>4、ES6 class与ES5 function区别及联系<br>5、vue怎么监听数组<br>6、写过webpack loader吗<br>7、微信网页版登录机制思考</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://badmanpro.github.io" rel="external nofollow noreferrer">Casper Han</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://badmanpro.github.io/2019/07/02/mian-shi-ti-zhun-bei/">https://badmanpro.github.io/2019/07/02/mian-shi-ti-zhun-bei/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://badmanpro.github.io" target="_blank">Casper Han</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: null,
+        id: '2019-07-02T15-36-33',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/07/11/jin-ji-liu-lan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="紧急浏览">
+                        
+                        <span class="card-title">紧急浏览</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            #js面试题##js数组###一、按要求分割数组
+将”js，数组，分类”字符串数组以/分割
+
+for循环累加
+
+var arr = ["js", "数组", "分类"];
+var separator = "/"
+// 初始化str
+var 
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-11
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Casper Han
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/05/08/mian-shi-hui-zong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="面试汇总">
+                        
+                        <span class="card-title">面试汇总</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            #HTML题目##1. meta viewport是干什么的
+&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1"&g
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Casper Han
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+    
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+    <!--
+ * @Author: Casper Han
+ * @Date: 2019-12-12 14:03:29
+ * @LastEditTime: 2020-04-02 21:55:12
+ * @LastEditors: Casper Han
+ * @Description: 
+ * @FilePath: /CasperBlog/themes/hexo-theme-matery/layout/_partial/footer.ejs
+ -->
+<footer class="page-footer bg-color">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2019</span>
+            <a href="https://badmanpro.github.io" target="_blank">Casper Han</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <!-- <br> -->
+            <!-- 
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">29.4k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+             -->
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/badManPro" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2529670555@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2529670555" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2529670555" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
