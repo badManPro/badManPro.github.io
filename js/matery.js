@@ -138,10 +138,10 @@ $(function () {
     function showOrHideNavBg(position) {
         let showPosition = 100;
         if (position < showPosition) {
-            $nav.addClass('nav-transparent');
+            $nav.removeClass('nav-transparent');
             $backTop.slideUp(300);
         } else {
-            $nav.removeClass('nav-transparent');
+            $nav.addClass('nav-transparent');
             $backTop.slideDown(300);
         }
     }
