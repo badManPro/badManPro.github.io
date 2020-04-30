@@ -4,16 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="紧急浏览, 前端,学习,技术,互联网">
-    <meta name="description" content="#js面试题##js数组###一、按要求分割数组
-将”js，数组，分类”字符串数组以/分割
-
-for循环累加
-
-var arr = [&#34;js&#34;, &#34;数组&#34;, &#34;分类&#34;];
-var separator = &#34;/&#34;
-// 初始化str
-var ">
+    <meta name="keywords" content="前端常见业务需求, 前端,学习,技术,互联网">
+    <meta name="description" content="新坑开垦最近想开一个新坑，主要是web端对应业务所能用到的效果逻辑的一些小DEMO实现的思路，想到哪里写到哪里，写完推送到Github库里面，进行维护，也是对自己的一种锻炼，同时也方便以后业务中需要相应的效果的时候，健忘的我能回头快速找到实">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +13,7 @@ var ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>紧急浏览 | Casper</title>
+    <title>前端常见业务需求 | Casper</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +303,12 @@ var ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">紧急浏览</h1>
+                    <h1 class="description center-align post-title">前端常见业务需求</h1>
                 </div>
             </div>
         </div>
@@ -445,7 +437,7 @@ var ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-11
+                    2020-04-06
                 </div>
                 
 
@@ -454,7 +446,7 @@ var ">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    438
+                    191
                 </div>
                 
 
@@ -472,72 +464,7 @@ var ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>#js面试题<br>##js数组<br>###一、按要求分割数组</p>
-<p>将”js，数组，分类”字符串数组以/分割</p>
-<ol>
-<li>for循环累加</li>
-</ol>
-<pre><code>var arr = ["js", "数组", "分类"];
-var separator = "/"
-// 初始化str
-var str = arr[0];
-for(var i=1;i&lt;arr.length;i++){
-    str += separator + arr[i]
-}
-console.log(str)</code></pre><ol start="2">
-<li>join()把数组元素链接成字符串</li>
-</ol>
-<pre><code>var arr = ["js", "数组", "分类"];
-var str = arr.join("/");
-console.log(str)</code></pre><p>###二、反向输出数组</p>
-<ol>
-<li>reverse()数组函数</li>
-</ol>
-<pre><code>var arr = ["js", "数组", "分类"];
-revArr = arr.reverse()
-console.log(revArr)</code></pre><ol start="2">
-<li>正向遍历，反向添加</li>
-</ol>
-<pre><code>var arr = ["js", "数组", "分类"];
-for(var i=0;i&lt;arr.length/2;i++){
-    var temp = arr[i];
-    arr[i] = arr[arr.length-1-i];
-    arr[arr.length-1-i]=temp
-    console.log(arr[i])
-}
-console.log(arr)</code></pre><p>###三、去掉不符合要求的元素</p>
-<p>去掉不符合要求的数</p>
-<pre><code>// 去掉大于10的数字
-var arr = [1, 5, 4, 10, 48, 500, 14];
-var newArr = arr.filter(function(ele,i,array){
-    //10以上返回false
-    if (ele&lt;10) {
-        return true;
-    }else {
-        return false;
-    }
-})
-console.log(newArr)</code></pre><p>###四、找到某个元素在数组中的下标值</p>
-<p>找到所有出现”a”的位置</p>
-<pre><code>var arr = ["c", "a", "d", "a", "d"];
-// 遍历
-arr.forEach(function(ele, index, array){
-    if("a" === ele){
-        console.log(index)
-    }
-})</code></pre><p>###五、数组去重</p>
-<pre><code>//indexOf进行判断，有就不添加没有就添加
-var arr = ["干垃圾", "湿垃圾", "可回收垃圾", "干垃圾", "有害垃圾", "干垃圾", "湿垃圾"];
-var newArr = [];
-arr.forEach(function(item, index, array){
-    if(newArr.indexOf(item) === -1){
-        //不存在就添加，存在就不添加
-        newArr.push(item)
-    }
-})
-console.log(newArr)</code></pre><pre><code>var arr = ["干垃圾", "湿垃圾", "可回收垃圾", "干垃圾", "有害垃圾", "干垃圾", "湿垃圾"];
-    var a = new Set(arr);
-    console.log(...a)</code></pre><script>
+                <h1 id="新坑开垦"><a href="#新坑开垦" class="headerlink" title="新坑开垦"></a>新坑开垦</h1><pre><code>最近想开一个新坑，主要是web端对应业务所能用到的效果逻辑的一些小DEMO实现的思路，想到哪里写到哪里，写完推送到Github库里面，进行维护，也是对自己的一种锻炼，同时也方便以后业务中需要相应的效果的时候，健忘的我能回头快速找到实现的方法，大大缩短瞎想的时间。对应实现的效果和Github的链接会经常在此篇博客进行更新。</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -580,7 +507,7 @@ console.log(newArr)</code></pre><pre><code>var arr = ["干垃圾", "湿垃圾", 
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://gitee.com/2529670555/blog.git/gitee.com/2529670555/blog.git/2019/07/11/jin-ji-liu-lan/">https://gitee.com/2529670555/blog.git/gitee.com/2529670555/blog.git/2019/07/11/jin-ji-liu-lan/</a>
+                    <a href="https://gitee.com/2529670555/blog.git/gitee.com/2529670555/blog.git/2020/04/06/qian-duan-chang-jian-ye-wu-xu-qiu/">https://gitee.com/2529670555/blog.git/gitee.com/2529670555/blog.git/2020/04/06/qian-duan-chang-jian-ye-wu-xu-qiu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -786,7 +713,7 @@ console.log(newArr)</code></pre><pre><code>var arr = ["干垃圾", "湿垃圾", 
         repo: '',
         owner: '',
         admin: null,
-        id: '2019-07-11T22-35-20',
+        id: '2020-04-06T15-03-54',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -807,29 +734,30 @@ console.log(newArr)</code></pre><pre><code>var arr = ["干垃圾", "湿垃圾", 
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/gitee.com/2529670555/blog.git/2019/07/15/vue-lu-you-quan-xian-she-zhi/">
+                <a href="/gitee.com/2529670555/blog.git/2020/04/06/qian-duan-chang-jian-ye-wu-xu-qiu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Vue路由权限设置">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="前端常见业务需求">
                         
-                        <span class="card-title">Vue路由权限设置</span>
+                        <span class="card-title">前端常见业务需求</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            #Vue-router + Vuex实现动态路由加载和菜单##前言动态路由加载和动态菜单渲染在后端OA权限控制中十分常见，后端只需要加载权限路由进行渲染返回到浏览器就可以。在前后分离中，权限控制动态路由和动态菜单也是一个分叉常见的问题。首先
+                            新坑开垦最近想开一个新坑，主要是web端对应业务所能用到的效果逻辑的一些小DEMO实现的思路，想到哪里写到哪里，写完推送到Github库里面，进行维护，也是对自己的一种锻炼，同时也方便以后业务中需要相应的效果的时候，健忘的我能回头快速找到实
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -838,6 +766,7 @@ console.log(newArr)</code></pre><pre><code>var arr = ["干垃圾", "湿垃圾", 
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -848,24 +777,28 @@ console.log(newArr)</code></pre><pre><code>var arr = ["干垃圾", "湿垃圾", 
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/gitee.com/2529670555/blog.git/2019/07/02/mian-shi-ti-zhun-bei/">
+                <a href="/gitee.com/2529670555/blog.git/2020/04/03/elementui-biao-ge-nei-dan-xuan-kuang-bug/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="面试题准备">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="ElementUI 表格内单选框bug">
                         
-                        <span class="card-title">面试题准备</span>
+                        <span class="card-title">ElementUI 表格内单选框bug</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            #css##1、盒模型标准W3C盒模型(content-box)width：contentIE盒模型width(border-box)：content+border+padding通过CSS3属性box-sizing来设定，参数有borde
+                            ElementUI 表格内单选框bug业务中用ElementUI来布局表格，表格内需要一个checkbox像这样本来ElementUI有响应的属性可以创建checkbox，但是却是如下效果的
+
+//部分代码
+&lt;el-table
+   
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
                             </span>
                         <span class="publish-author">
                             
